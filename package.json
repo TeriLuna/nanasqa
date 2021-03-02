@@ -1,5 +1,22 @@
 {
   "name": "nanasqa",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "^6.0.0-beta.5",
+    "stimulus": "^2.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "devDependencies": {
+    "@webpack-cli/serve": "^1.3.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "babel": {
+    "presets": [
+      "./node_modules/@rails/webpacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
