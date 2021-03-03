@@ -37,7 +37,20 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # other
-gem 'webpacker', '~> 6.x'
+gem 'jquery-rails'
+gem 'popper_js'
+gem 'bootstrap'
+gem 'figaro'
+gem 'aws-sdk-s3'
+gem 'activeadmin'
+gem 'activeadmin_froala_editor'
+gem "breadcrumbs_on_rails"
+gem 'kaminari'
+gem 'money'
+gem 'money-rails', '~>1.12'
+gem 'country_select', '~> 4.0'
+
+gem "font-awesome-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

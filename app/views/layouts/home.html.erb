@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Nanasqa</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+  <!-- ***** HEAD ***** -->
+  <%= render partial: "shared/head" %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag    'home', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body class="loaded">
 
-  <body>
+
+  <!-- ***** HEADER ***** -->
+  <%= render partial: "shared/header" %>
+
     <%= yield %>
+
+  <!-- ***** FOOTER ***** -->
+    <%= render partial: "shared/footer" %>
+
+  <!-- ***** JAVASCRIPTS ***** -->
+    <%= render partial: "shared/javascripts"%>
+
   </body>
+
 </html>
