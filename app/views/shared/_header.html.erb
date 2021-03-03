@@ -3,16 +3,18 @@
       <div class="container">
         <!-- Logo -->
         <div class="header-logo">
-          <h3><a href="#">mono</a></h3>
+          <h3> <%= image_tag asset_path('logo_text.png') %></h3>
           <!--
           <img class="logo-dark" src="../assets/images/your-logo-dark.png" alt="">
           <img class="logo-light" src="../assets/images/your-logo-light.png" alt="">
           -->
         </div>
+
         <!-- Menu -->
         <div class="header-menu">
           <ul class="nav">
             <li class="nav-item">
+
               <%- if user_signed_in? %>
                 <a class="nav-link" href="#"> <%= t('global.profile') %> </a>
                 <ul class="nav-dropdown">
@@ -24,11 +26,12 @@
               <%- end %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link Only</a>
+              <a class="nav-link no-underline" href="#">Link Only</a>
+
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Dropdown</a>
-              <ul class="nav-dropdown">
+              <a class="nav-link no-underline" href="#">Dropdown</a>
+              <ul class="nav-dropdown no-underline">
                 <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
                 <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
                 <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
@@ -59,13 +62,14 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </div> -->
+
         <!-- Menu Extra -->
         <div class="header-menu-extra">
           <ul class="list-inline">
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a class="no-underline" href="https://www.facebook.com/nanasqa/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="no-underline" href="https://twitter.com/nanasqa"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="no-underline" href="https://www.instagram.com/nanasqa/"><i class="fab fa-linkedin-in"></i></a></li>
           </ul>
         </div>
         <!-- Menu Toggle -->
