@@ -1,9 +1,9 @@
     <!-- Header -->
-    <div class="header rigth">
+    <div class="header rigth absolute-light sticky-autohide">
       <div class="container">
         <!-- Logo -->
         <div class="header-logo">
-          <h3> <%= image_tag asset_path('logo_text.png') %></h3>
+          <h3><%= image_tag asset_path('logo_text.png') %></h3>
           <!--
           <img class="logo-dark" src="../assets/images/your-logo-dark.png" alt="">
           <img class="logo-light" src="../assets/images/your-logo-light.png" alt="">
@@ -22,12 +22,11 @@
                   <li class="nav-dropdown-item"><%= link_to(t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
                 </ul>
               <%- else %>
-                <%= link_to(t('header.login'), new_user_session_path, class: "nav-link") %>
+                <%= link_to(t('header.login'), new_user_session_path, class: "nav-link no-underline") %>
               <%- end %>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link no-underline" href="#">Link Only</a>
-
             </li>
             <li class="nav-item">
               <a class="nav-link no-underline" href="#">Dropdown</a>
@@ -58,18 +57,18 @@
                     <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
                     <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
-        </div> -->
+        </div>
 
         <!-- Menu Extra -->
         <div class="header-menu-extra">
           <ul class="list-inline">
-            <li><a class="no-underline" href="https://www.facebook.com/nanasqa/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a class="no-underline" href="https://twitter.com/nanasqa"><i class="fab fa-twitter"></i></a></li>
-            <li><a class="no-underline" href="https://www.instagram.com/nanasqa/"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a class="no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="no-underline" target="_blanck" href="https://twitter.com/nanasqa"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/"><i class="fab fa-linkedin-in"></i></a></li>
           </ul>
         </div>
         <!-- Menu Toggle -->

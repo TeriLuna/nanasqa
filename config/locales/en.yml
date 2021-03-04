@@ -39,3 +39,14 @@ en:
     password_confirmation: "Confirm Password"
     remember_me: "Remember me"
     sign_up: "Sign up"
+  testimonial:
+    work_away_member: "Workaway member"
+    anka_work_away_member: '"A (not so little) magical spot surrounded by the desert. If you are looking for a place with friendly atmosphere, open-minded people, and you like to dance - this is a place to go to! There are not many hostels like this one. Full of art, good vibes and music. Roy is a very generous host. You might have a problem to leave ;)"'
+    fosca_work_away_member: '"Buenisima experiencia!! Para empezar, Roy es maravillosa persona...detallista, extrovertido y muy flexible! Eso hace que trabajar en el hostal no sea nunca pesado y haya manera de conocer con tranquilidad Nasca y su entorno (también gracias a los consejos que te proporciona Roy, que sabe muuuucho de su tierra!!). La atmósfera en casa es siempre relajada y muy alegre, la comica rica y el clima calientito....pude quedarme sólo una semana por falta de tiempo, sino porque irse?!??"'
+    erica_work_away_member: '"I left my heart in this beautiful place! It is friendly and chilly! Work is easy and amazing! And it is possible to visit many incredible places. Roy is a great person, always happy and really kind, with a lots of positive energy. It has been an unforgettable experience! Thanks for evrything :blush:"'
+    theres_philip_work_away_member: '"We had a really great time at Roy’s hostel! Unfortunately we could only stay for one week. The work was pretty easy and made a lot of fun! Roy and the other volunteers we stayed with were all very friendly and funny! We did a lot of things together and enjoyed it every day! Nice place to be!!"'
+    worldpacker_member: "Worldpacker member"
+    ignacio_worldpacker_member: '"Si quieres vivir la mejor experiencia de tu vida como voluntario NANASQA HOSTEL es para ti! Muchos llegamos a Nasca queriendo conocer las lineas de las que todos hablan, y seguir nuestro camino, pero cuando te encuentres con el mejor Hostel de toda la ciudad, y conoces a Roy, todo cambia y quieres hacer de Nasca tu nuevo hogar, asi que lo unico malo que podria pasarte es que cambies tus planes y te quedes por un mes o dos viviendo esta experiencia! Nunca lo olvidare!"'
+    tamara_worldpacker_member: '"Definitivamente recomendamos Nanasqa! Desafortunadamente no pudimos conocer al propietario, pero todo fue muy bien. Estuvimos dos semanas muy cómodos. El trabajo era tranquilo y el hostel es nuevo y lindo!"'
+  footer:
+    allrights: "Fcking Brand Me, All Rights Reserved."

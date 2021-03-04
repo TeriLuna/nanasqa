@@ -39,29 +39,17 @@
 <!-- end section -->
 
 <!-- Parallax 1 section -->
-<div class="section-xl bg-image parallax" data-bg-src="../assets/images/background.jpg">
-	<div class="bg-black-03">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-md-10 offset-md-1">
-					<div class="row align-items-center">
-						<div class="col-12 col-lg-8 text-center text-lg-left">
-							<h1 class="font-weight-extra-light marin-0">Lightbox Video Player</h1>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-						</div>
-						<div class="col-12 col-lg-4 text-center text-lg-right">
-							<a class="button-circle button-circle-xl button-circle-outline-white-2 button-circle-animation-drop lightbox-media-link" href="https://www.youtube.com/watch?v=W-j4QGAgNu8"><i class="fas fa-play"></i></a>
-						</div>
-					</div>
-				</div>
-			</div><!-- end row -->
-		</div><!-- end container -->
+
+<!-- <div class="section">
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe data-bg-src="<%=asset_url('video.MP4')%>" allowfullscreen></iframe>
 	</div>
-</div>
-<!-- end Parallax 1 section -->
+</div> -->
+
+<!-- End Parallax 1 section -->
 
 <!-- App Screenshots section -->
-< !-- <div class="section-lg">
+<!-- <div class="section-lg">
 	<div class="container">
 		<div class="owl-carousel" data-owl-nav="true" data-owl-margin="20" data-owl-xs="1" data-owl-sm="2" data-owl-md="3" data-owl-lg="4" data-owl-xl="4">
 
@@ -121,13 +109,13 @@
 			<div class="col-12 col-md-4 order-md-1 text-md-right">
 				<!-- Icon text box 1 -->
 				<div class="margin-bottom-30 icon-4xl">
-					<i class="ti-world text-dark"></i>
+					<i class="ti-star text-dark"></i>
 					<h6 class="font-family-tertiary font-small font-weight-normal uppercase margin-top-20">Heading</h6>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 				</div>
 				<!-- Icon text box 2 -->
 				<div class="icon-4xl">
-					<i class="ti-world text-dark"></i>
+					<i class="fab fa-tree text-dark"></i>
 					<h6 class="font-family-tertiary font-small font-weight-normal uppercase margin-top-20">Heading</h6>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 				</div>
@@ -160,8 +148,8 @@
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 						<div class="d-inline-block">
-							<h5 class="font-weight-normal line-height-140 margin-0">Emiley Haley</h5>
-							<span class="font-small font-weight-normal text-white-09">Manager - Mono</span>
+							<h5 class="font-weight-normal line-height-140 margin-0">Anka</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.work_away_member')%></span>
 						</div>
 						<div class="d-inline-block text-yellow">
 							<i class="fas fa-star"></i>
@@ -171,14 +159,31 @@
 							<i class="fas fa-star"></i>
 						</div>
 					</div>
-					<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
+					<p><%= t('testimonial.anka_work_away_member')%></p>
+				</div>
+				<!-- Testimonial box 1.5 -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Tamara</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.worldpacker_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star text-black"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.tamara_worldpacker_member')%></p>
 				</div>
 				<!-- Testimonial box 2 -->
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 						<div class="d-inline-block">
-							<h5 class="font-weight-normal line-height-140 margin-0">Robert Vincent</h5>
-							<span class="font-small font-weight-normal text-white-09">Marketer - Mono</span>
+							<h5 class="font-weight-normal line-height-140 margin-0">Fosca</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.work_away_member')%></span>
 						</div>
 						<div class="d-inline-block text-yellow">
 							<i class="fas fa-star"></i>
@@ -188,14 +193,31 @@
 							<i class="fas fa-star"></i>
 						</div>
 					</div>
-					<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
+					<p><%= t('testimonial.fosca_work_away_member')%></p>
+				</div>
+				<!-- Testimonial box 2.5 -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Ignacio</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.worldpacker_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star text-black"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.ignacio_worldpacker_member')%></p>
 				</div>
 				<!-- Testimonial box 3 -->
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 						<div class="d-inline-block">
-							<h5 class="font-weight-normal line-height-140 margin-0">Andrew Palmer</h5>
-							<span class="font-small font-weight-normal text-white-09">Developer - Mono</span>
+							<h5 class="font-weight-normal line-height-140 margin-0">Erica</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.work_away_member')%></span>
 						</div>
 						<div class="d-inline-block text-yellow">
 							<i class="fas fa-star"></i>
@@ -205,14 +227,14 @@
 							<i class="fas fa-star"></i>
 						</div>
 					</div>
-					<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
+					<p><%= t('testimonial.erica_work_away_member')%></p>
 				</div>
 				<!-- Testimonial box 4 -->
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 						<div class="d-inline-block">
-							<h5 class="font-weight-normal line-height-140 margin-0">Rodney Scott</h5>
-							<span class="font-small font-weight-normal text-white-09">Designer - Mono</span>
+							<h5 class="font-weight-normal line-height-140 margin-0">Theres & Philip</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.work_away_member')%></span>
 						</div>
 						<div class="d-inline-block text-yellow">
 							<i class="fas fa-star"></i>
@@ -222,7 +244,7 @@
 							<i class="fas fa-star"></i>
 						</div>
 					</div>
-					<p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."</p>
+					<p><%= t('testimonial.theres_philip_work_away_member')%></p>
 				</div>
 			</div><!-- end owl-carousel -->
 		</div><!-- end container -->
@@ -231,7 +253,7 @@
 <!-- end Testimonial section -->
 
 <!-- Prices section -->
-<div class="section-lg">
+<!-- <div class="section-lg">
 	<div class="container">
 		<div class="margin-bottom-70">
 			<div class="row text-center">
@@ -242,7 +264,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<!-- Prices box 1 -->
+			// Prices box 1 //
 			<div class="col-12 col-md-4">
 				<div class="prices-box border-radius hover-float hover-shadow">
 					<h6 class="font-weight-normal">Personal</h6>
@@ -259,7 +281,7 @@
 					<a class="button button-md button-radius button-dark" href="#">Order Now</a>
 				</div>
 			</div>
-			<!-- Prices box 2 -->
+			// Prices box 2 //
 			<div class="col-12 col-md-4">
 				<div class="prices-box border-radius hover-float hover-shadow">
 					<h6 class="font-weight-normal">Business</h6>
@@ -276,7 +298,7 @@
 					<a class="button button-md button-radius button-dark" href="#">Order Now</a>
 				</div>
 			</div>
-			<!-- Prices box 3 -->
+			// Prices box 3 //
 			<div class="col-12 col-md-4">
 				<div class="prices-box border-radius hover-float hover-shadow">
 					<h6 class="font-weight-normal">Premium</h6>
@@ -293,7 +315,7 @@
 					<a class="button button-md button-radius button-dark" href="#">Order Now</a>
 				</div>
 			</div>
-		</div><!-- end row -->
-	</div><!-- end container -->
-</div>
+		</div>
+	</div>
+</div> -->
 <!-- end Prices section -->
