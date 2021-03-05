@@ -10,66 +10,32 @@
           -->
         </div>
 
-        <!-- Menu -->
-        <div class="header-menu">
-          <ul class="nav">
-            <li class="nav-item">
-
-              <%- if user_signed_in? %>
-                <a class="nav-link" href="#"> <%= t('global.profile') %> </a>
-                <ul class="nav-dropdown">
-                  <li class="nav-dropdown-item"><%= link_to t('header.my_info'), user_path(current_user), class: "nav-dropdown-link" %></li>
-                  <li class="nav-dropdown-item"><%= link_to(t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
-                </ul>
-              <%- else %>
-                <%= link_to(t('header.login'), new_user_session_path, class: "nav-link no-underline") %>
-              <%- end %>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link no-underline" href="#">Link Only</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link no-underline" href="#">Dropdown</a>
-              <ul class="nav-dropdown no-underline">
-                <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-                <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-                <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-                <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Subdropdown</a>
-              <ul class="nav-dropdown">
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Dropdown Item</a>
-                  <ul class="nav-subdropdown">
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                  </ul>
-                </li>
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Dropdown Item</a>
-                  <ul class="nav-subdropdown">
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                    <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                  </ul>
-                </li> -->
-              </ul>
-            </li>
-          </ul>
-        </div>
 
         <!-- Menu Extra -->
         <div class="header-menu-extra">
-          <ul class="list-inline">
-            <li><a class="no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a class="no-underline" target="_blanck" href="https://twitter.com/nanasqa"><i class="fab fa-twitter"></i></a></li>
-            <li><a class="no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/"><i class="fab fa-linkedin-in"></i></a></li>
-          </ul>
+          <div class="text-right">
+            <ul class="list-inline">
+              <li><a class="no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a class="no-underline" target="_blanck" href="https://twitter.com/nanasqa"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/"><i class="fab fa-linkedin-in"></i></a></li>
+
+              <%- if user_signed_in? %>
+                <li>
+                  <a class="nav-link" href="#"> <%= t('global.profile') %> </a>
+                  <ul class="nav-dropdown">
+                    <li class="nav-dropdown-item"><%= link_to t('header.my_info'), user_path(current_user), class: "nav-dropdown-link" %></li>
+                    <li class="nav-dropdown-item"><%= link_to(t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
+                  </ul>
+                </li>
+                <%- else %>
+                <li>
+                  <%= link_to(new_user_session_path, class: "nav-link no-underline") do %>
+                    <i class="fa fa-user"></i>
+                  <%- end %>
+                </li>
+              <%- end %>
+            </ul>
+          </div>
         </div>
         <!-- Menu Toggle -->
         <button class="header-toggle">

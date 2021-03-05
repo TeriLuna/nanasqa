@@ -104,7 +104,7 @@
 	<div class="container">
 		<div class="row align-items-center col-spacing-40">
 			<div class="col-12 col-md-4 order-md-2 text-center">
-				<img src="../assets/images/phone.jpg" alt="">
+				<i class = "fa-pulse"><img src="<%= asset_url('logo.png')%>"></i>
 			</div>
 			<div class="col-12 col-md-4 order-md-1 text-md-right">
 				<!-- Icon text box 1 -->
@@ -115,7 +115,7 @@
 				</div>
 				<!-- Icon text box 2 -->
 				<div class="icon-4xl">
-					<i class="fab fa-tree text-dark"></i>
+					<i class="fa fa-tree text-dark"></i>
 					<h6 class="font-family-tertiary font-small font-weight-normal uppercase margin-top-20">Heading</h6>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 				</div>
@@ -161,7 +161,24 @@
 					</div>
 					<p><%= t('testimonial.anka_work_away_member')%></p>
 				</div>
-				<!-- Testimonial box 1.5 -->
+				<!-- Testimonial box  -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Lee Anne & Steve</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.airbnb_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.lee_airbnb_member')%></p>
+				</div>
+				<!-- Testimonial box 1.1 -->
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 						<div class="d-inline-block">
@@ -177,6 +194,23 @@
 						</div>
 					</div>
 					<p><%= t('testimonial.tamara_worldpacker_member')%></p>
+				</div>
+				<!-- Testimonial box 1.2 -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Carmen</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.booking_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star text-black"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.carmen_booking_member')%></p>
 				</div>
 				<!-- Testimonial box 2 -->
 				<div class="bg-black-07 border-radius padding-30">
@@ -195,7 +229,7 @@
 					</div>
 					<p><%= t('testimonial.fosca_work_away_member')%></p>
 				</div>
-				<!-- Testimonial box 2.5 -->
+				<!-- Testimonial box 2.1 -->
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 						<div class="d-inline-block">
@@ -229,6 +263,23 @@
 					</div>
 					<p><%= t('testimonial.erica_work_away_member')%></p>
 				</div>
+				<!-- Testimonial box 3.1 -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Enrique</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.booking_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star text-black"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.enrique_booking_member')%></p>
+				</div>
 				<!-- Testimonial box 4 -->
 				<div class="bg-black-07 border-radius padding-30">
 					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
@@ -246,76 +297,44 @@
 					</div>
 					<p><%= t('testimonial.theres_philip_work_away_member')%></p>
 				</div>
+				<!-- Testimonial box 4.1 -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Bisbal</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.booking_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.bisbal_booking_member')%></p>
+				</div>
+				<!-- Testimonial box 4.2 -->
+				<div class="bg-black-07 border-radius padding-30">
+					<div class="d-flex align-items-center justify-content-between margin-bottom-20">
+						<div class="d-inline-block">
+							<h5 class="font-weight-normal line-height-140 margin-0">Patricia</h5>
+							<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.airbnb_member')%></span>
+						</div>
+						<div class="d-inline-block text-yellow">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star text-black"></i>
+						</div>
+					</div>
+					<p><%= t('testimonial.patricia_airbnb_member')%></p>
+				</div>
 			</div><!-- end owl-carousel -->
 		</div><!-- end container -->
 	</div><!-- end bg-black-* -->
 </div>
 <!-- end Testimonial section -->
 
-<!-- Prices section -->
-<!-- <div class="section-lg">
-	<div class="container">
-		<div class="margin-bottom-70">
-			<div class="row text-center">
-				<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-					<h2>Prices We Offer</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Integer tincidunt.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			// Prices box 1 //
-			<div class="col-12 col-md-4">
-				<div class="prices-box border-radius hover-float hover-shadow">
-					<h6 class="font-weight-normal">Personal</h6>
-					<div class="price">
-						<h1 class="font-weight-light">19<span>/mo</span></h1>
-					</div>
-					<div class="price-features">
-						<ul>
-							<li>Unlimited User</li>
-							<li>Unlimited Storage</li>
-							<li>24/7 Support</li>
-						</ul>
-					</div>
-					<a class="button button-md button-radius button-dark" href="#">Order Now</a>
-				</div>
-			</div>
-			// Prices box 2 //
-			<div class="col-12 col-md-4">
-				<div class="prices-box border-radius hover-float hover-shadow">
-					<h6 class="font-weight-normal">Business</h6>
-					<div class="price">
-						<h1 class="font-weight-light">49<span>/mo</span></h1>
-					</div>
-					<div class="price-features">
-						<ul>
-							<li>Unlimited User</li>
-							<li>Unlimited Storage</li>
-							<li>24/7 Support</li>
-						</ul>
-					</div>
-					<a class="button button-md button-radius button-dark" href="#">Order Now</a>
-				</div>
-			</div>
-			// Prices box 3 //
-			<div class="col-12 col-md-4">
-				<div class="prices-box border-radius hover-float hover-shadow">
-					<h6 class="font-weight-normal">Premium</h6>
-					<div class="price">
-						<h1 class="font-weight-light">79<span>/mo</span></h1>
-					</div>
-					<div class="price-features">
-						<ul>
-							<li>Unlimited User</li>
-							<li>Unlimited Storage</li>
-							<li>24/7 Support</li>
-						</ul>
-					</div>
-					<a class="button button-md button-radius button-dark" href="#">Order Now</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 <!-- end Prices section -->
