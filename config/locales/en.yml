@@ -39,6 +39,8 @@ en:
     password_confirmation: "Confirm Password"
     remember_me: "Remember me"
     sign_up: "Sign up"
+  index:
+      index_text: "Spend time and get chill in Nanasqa"
   testimonial:
     work_away_member: "Workaway member"
     anka_work_away_member: '"A (not so little) magical spot surrounded by the desert. If you are looking for a place with friendly atmosphere, open-minded people, and you like to dance - this is a place to go to! There are not many hostels like this one. Full of art, good vibes and music. Roy is a very generous host. You might have a problem to leave ;)"'
