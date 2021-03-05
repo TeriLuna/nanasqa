@@ -10,11 +10,11 @@
 
 
   <a href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to book a room! / Hola! Me gustaría reservar una habitación" class="whatsapp-float" target="_blank">
-      <i class="fab fa-whatsapp-square my-float"></i>
+      <i class="fab fa-whatsapp my-float"></i>
   </a>
 
   <!-- ***** HEADER ***** -->
-  <%= render partial: "shared/header" %>
+  <%= render partial: "shared/header", locals: { layout_classes: "header right white absolute-light sticky-autohide"} %>
 
     <%= yield %>
 

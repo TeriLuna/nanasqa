@@ -59,3 +59,19 @@ en:
     lee_airbnb_member: '"Roy s place is fantastic! It is new and clean and we met lots of good people there. It was so nice to have our own double room with comfy bed and pillows and a private bathroom! You can walk to and from the bus station and even book a Nazca Lines tour with Roy. You do not even have to walk to the shop for beers as they have a fridge full of them for cheap! And for you ladies out there: a great hairdryer!"'
   footer:
     allrights: "Fcking Brand Me, All Rights Reserved."
+    rooms: "Rooms"
+    trips: "Trips"
+    flights: "Flights"
+    volunteer: "Be a volunteer"
+  reservation:
+    book_now: "Book now!"
+    fun: "Let's get fun!"
+  features:
+    stars: "Look the at stars!"
+    stars_text: "You will be able to admire the wonderful sky full of bright stars in the best places of Nazca."
+    tree: "Breathe fresh air"
+    tree_text: "You will breathe fresh air in little paradisiacal sites."
+    dunes: "Walk and slide on the dunes"
+    dunes_text: "Slide in the dunes, have fun doing a different and unique sport!"
+    routes: "Know our routes!"
+    routes_text: "We have the best routes to know all the wonders of Nazca."

@@ -1,24 +1,23 @@
 <!-- Header -->
-<div class="header rigth absolute-light sticky-autohide">
+<%- layout_classes = 'header right absolute-light sticky-autohide' unless local_assigns[:layout_classes] %>
+<div class="<%= layout_classes %>">
   <div class="container">
     <!-- Logo -->
     <div class="header-logo">
-      <h3><%= image_tag asset_path('logo_text.png') %></h3>
+      <h3>
+        <%=link_to(image_tag(asset_path('logo_text.png')), root_path, class:"no-underline") %>
+      </h3>
+
       <!--
       <img class="logo-dark" src="../assets/images/your-logo-dark.png" alt="">
       <img class="logo-light" src="../assets/images/your-logo-light.png" alt="">
       -->
     </div>
-
-    <div  class="header-menu">
-      <span></span>
-    </div>
-
-    <!-- Menu Extra -->
-    <div class="header-menu-extra">
-      <ul class="list-inline">
+    <!-- Menu -->
+    <div class="header-menu">
+      <ul class="nav list-inline">
         <%- if user_signed_in? %>
-          <li>
+          <li class="nav-item">
             <a class="nav-link" href="#"> <%= t('global.profile') %> </a>
             <ul class="nav-dropdown">
               <li class="nav-dropdown-item"><%= link_to t('header.my_info'), user_path(current_user), class: "nav-dropdown-link" %></li>
@@ -26,17 +25,73 @@
             </ul>
           </li>
           <%- else %>
-          <li>
+          <li class="nav-item">
             <%= link_to(new_user_session_path, class: "nav-link no-underline") do %>
               <i class="fa fa-user"></i>
             <%- end %>
           </li>
         <%- end %>
-        <li><a class="no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a class="no-underline" target="_blanck" href="https://twitter.com/nanasqa"><i class="fab fa-twitter"></i></a></li>
-        <li><a class="no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/"><i class="fab fa-linkedin-in"></i></a></li>
+        <li class="nav-item">
+          <a class="nav-link no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link no-underline" target="_blanck" href="https://twitter.com/nanasqa">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link Only</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dropdown</a>
+          <ul class="nav-dropdown">
+            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
+            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
+            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
+            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Subdropdown</a>
+          <ul class="nav-dropdown">
+            <li class="nav-dropdown-item">
+              <a class="nav-dropdown-link" href="#">Dropdown Item</a>
+              <ul class="nav-subdropdown">
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown-item">
+              <a class="nav-dropdown-link" href="#">Dropdown Item</a>
+              <ul class="nav-subdropdown">
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
+              </ul>
+            </li>
+          </ul> -->
+        </li>
       </ul>
     </div>
+    <!-- Menu Extra -->
+    <!-- <div class="header-menu-extra">
+      <ul class="list-inline">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div> -->
     <!-- Menu Toggle -->
     <button class="header-toggle">
       <span></span>
