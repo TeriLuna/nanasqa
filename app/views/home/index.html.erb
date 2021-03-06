@@ -9,8 +9,16 @@
 	              <h1 class="display-2 font-family-tertiary font-weight-black">
 	                <%= t('index.index_text')%>
 	              </h1>
-	              <a class="button button-lg button-radius button-outline-white-2 margin-top-30 margin-right-20" href="#first"><i class="ti-bookmark-alt"></i><%= t('reservation.book_now')%></a>
-	              <a class="button button-lg button-radius button-outline-white-2 margin-top-30" href="#first"><i class="ti-face-smile"></i><%= t('reservation.fun')%></a>
+	              <a class="button button-lg button-radius button-white margin-top-30 margin-right-20" href="#first">
+	              	<i class="ti-bookmark-alt">
+	              	</i>
+	              	<%= t('reservation.book_now')%>
+	              </a>
+	              <a class="button button-lg button-radius button-white margin-top-30" href="#first">
+	              	<i class="ti-face-smile">
+	              	</i>
+	              	<%= t('reservation.fun')%>
+	              </a>
 	          </div>
 	        </div>
 	      </div>
@@ -38,7 +46,7 @@
 	<div class="container">
 		<div class="row align-items-center col-spacing-40">
 			<div class="col-12 col-md-4 order-md-2 text-center">
-				<i class = "fa-pulse"><img src="<%= asset_url('logo.png')%>"></i>
+				<i class = "fa-spin"><img src="<%= asset_url('logo.png')%>"></i>
 			</div>
 			<div class="col-12 col-md-4 order-md-1 text-md-right">
 				<!-- Icon text box 1 -->
@@ -70,7 +78,7 @@
 			</div>
 		</div><!-- end row -->
 		<div class="col-12 order-md-2 text-center margin-top-40">
-			<%= link_to(t('footer.volunteer'), volunteers_path, class:"button button-lg button-radius button-outline-dark-2 margin-top-40")%>
+			<%= link_to(t('footer.volunteer'), volunteers_path, class:"button button-lg button-radius button-dark margin-top-40")%>
 		</div>
 	</div><!-- end container -->
 </div>
@@ -85,7 +93,9 @@
 				<div class="d-flex align-items-center justify-content-between margin-bottom-20">
 					<div class="d-inline-block">
 						<h5 class="font-weight-normal line-height-140 margin-0">Anka</h5>
-						<span class="font-small font-weight-normal text-white-09"><%= t('testimonial.work_away_member')%></span>
+						<span class="font-small font-weight-normal text-white-09">
+							<%= t('testimonial.work_away_member')%>
+						</span>
 					</div>
 					<div class="d-inline-block text-yellow">
 						<i class="fas fa-star"></i>
