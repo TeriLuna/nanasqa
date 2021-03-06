@@ -3,25 +3,28 @@
   <div class="container">
     <div class="row align-items-center col-spacing-50">
       <div class="col-12 col-lg-5">
-        <h3 class="font-weight-light">We're a team of professionals who loves what they do</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="#"><span>Get In Touch</span><i class="ti-arrow-right"></i></a>
+        <h3 class="font-weight-light"><%= t('volunteer.title_volunteer')%></h3>
+        <%= t('volunteer.text_volunteer_html')%>
+        <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to be a volunteer in Nanasqa Hostel! / Hola! Me gustaría ser voluntari@ en Nanasqa Hostel" target="_blank">
+          <span><%= t('volunteer.get_in_touch')%></span>
+          <i class="ti-arrow-right"></i>
+        </a>
       </div>
       <div class="col-12 col-lg-7">
         <div class="row gallery-wrapper col-spacing-10">
           <!-- Gallery image box 1 -->
           <div class="col-6 gallery-box">
             <div class="gallery-img">
-              <a href="../assets/images/col-2-tall.jpg" data-gallery-title="Gallery Image 1">
-                <img src="../assets/images/col-2-tall.jpg" alt="">
+              <a href="<%= asset_path('col-2-tall.jpg')%>" data-gallery-title="Gallery Image 1">
+                <img src="<%= asset_url('col-2-tall.jpg')%>" alt="">
               </a>
             </div>
           </div>
           <!-- Gallery image box 2 -->
           <div class="col-6 gallery-box">
             <div class="gallery-img">
-              <a href="../assets/images/col-2-tall.jpg" data-gallery-title="Gallery Image 2">
-                <img src="../assets/images/col-2-tall.jpg" alt="">
+              <a href="<%= asset_url('col-2-tall.jpg')%>" data-gallery-title="Gallery Image 2">
+                <img src="<%= asset_url('col-2-tall.jpg')%>" alt="">
               </a>
             </div>
           </div>
@@ -32,30 +35,159 @@
 </div>
 <!-- end About section -->
 
-<!-- Services section -->
-<div class="container">
+<!-- Services section WHAT DO YOU OFFER -->
+<div class="container margin-top-20">
   <div class="row col-spacing-30 icon-5xl text-center">
+    <div class="col-12">
+      <div class="border-all border-radius padding-10 bg-dark">
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.what_do_you_offer_title')%></h5>
+      </div>
+    </div>
     <div class="col-12 col-md-6 col-lg-4">
       <div class="border-all border-radius padding-30">
-        <i class="margin-top-10 ti-ruler-pencil text-dark"></i>
-        <h5 class="font-weight-normal margin-top-20">Graphic Design</h5>
-        <p class="margin-bottom-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <i class="margin-top-10 fa fa-beer text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.bartending')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.bartending_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-concierge-bell text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.reception')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.reception_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fa fa-tree text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.gardering')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.gardering_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-broom text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.cleaning')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.cleaning_text')%></p>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-4">
       <div class="border-all border-radius padding-30">
         <i class="margin-top-10 ti-camera text-dark"></i>
-        <h5 class="font-weight-normal margin-top-20">Photography</h5>
-        <p class="margin-bottom-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.social_marketing')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.social_marketing_text')%></p>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-4">
       <div class="border-all border-radius padding-30">
         <i class="margin-top-10 ti-star text-dark"></i>
-        <h5 class="font-weight-normal margin-top-20">Social Marketing</h5>
-        <p class="margin-bottom-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.hours_per_day')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.hours_per_day_text')%></p>
+      </div>
+    </div>
+  </div><!-- end row -->
+</div><!-- end container -->
+
+<!-- Services section WHAT DO YOU GET-->
+<div class="container margin-top-20">
+  <div class="row col-spacing-30 icon-5xl text-center">
+    <div class="col-12">
+      <div class="border-all border-radius padding-10 bg-dark">
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.what_do_you_get_title')%></h5>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-bed text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.shared_dorm')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.shared_dorm_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-person-booth text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.team_dorm')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.team_dorm_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-campground text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.tent')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.tent_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-utensils text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.breakfast')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.breakfast_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-map-marked-alt text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.discounts_on_tours')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.discounts_on_tours_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-hand-holding-water text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.free_laundry')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.free_laundry_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-music text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.dance_classes')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.dance_classes_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-language text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.language_lessons')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.language_lessons_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-pizza-slice text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.use_kitchen')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.use_kitchen_text')%></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="border-all border-radius padding-30">
+        <i class="margin-top-10 fas fa-star text-dark"></i>
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.days_off')%></h5>
+        <p class="margin-bottom-10"><%= t('volunteer.days_off_text')%></p>
       </div>
     </div>
   </div><!-- end row -->
 </div><!-- end container -->
 <!-- end Services section -->
+
+<div class="container margin-top-20">
+  <div class="row col-spacing-30 icon-5xl text-center">
+    <div class="col-12">
+      <div class="border-all border-radius padding-10 bg-dark">
+        <h5 class="font-weight-normal margin-top-20"><%= t('volunteer.requirements')%></h5>
+      </div>
+        <ul class="list-icon list-icon-check margin-top-20">
+          <%= t('volunteer.requirements_text_html')%>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section-sm">
+  <div class="container text-right">
+    <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to be a volunteer in Nanasqa Hostel! / Hola! Me gustaría ser voluntari@ en Nanasqa Hostel" target="_blank">
+      <span><%= t('volunteer.get_in_touch')%></span>
+      <i class="ti-arrow-right"></i>
+    </a>
+  </div>
+</div>

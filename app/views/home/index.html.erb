@@ -1,6 +1,6 @@
 <!-- Home section -->
 <div class="bg-dark owl-carousel owl-nav-overlay owl-dots-overlay" data-owl-nav="false" data-owl-dots="false" data-owl-items="1" data-owl-autoPlay="true">
-	<%- ['nanasqa-1.jpg', 'nanasqa-2.jpg', 'nanasqa-3.jpg', 'nanasqa-4.jpg'].each do |image_name| %>
+	<%- ['nanasqa-1.jpg', 'nanasqa-3.jpg', 'nanasqa-2.jpg', 'nanasqa-4.jpg'].each do |image_name| %>
 	  <div class="section-fullscreen bg-image", data-bg-src= "<%= asset_url(image_name)%>">
 	    <div class="container text-center">
 	      <div class="position-middle">
@@ -9,8 +9,8 @@
 	              <h1 class="display-2 font-family-tertiary font-weight-black">
 	                <%= t('index.index_text')%>
 	              </h1>
-	              <a class="button button-lg button-radius button-outline-white-2 margin-top-30 margin-right-20" href="#first"><i class="fab fa-apple"></i><%= t('reservation.book_now')%></a>
-	              <a class="button button-lg button-radius button-outline-white-2 margin-top-30" href="#first"><i class="fab fa-android"></i><%= t('reservation.fun')%></a>
+	              <a class="button button-lg button-radius button-outline-white-2 margin-top-30 margin-right-20" href="#first"><i class="ti-bookmark-alt"></i><%= t('reservation.book_now')%></a>
+	              <a class="button button-lg button-radius button-outline-white-2 margin-top-30" href="#first"><i class="ti-face-smile"></i><%= t('reservation.fun')%></a>
 	          </div>
 	        </div>
 	      </div>
