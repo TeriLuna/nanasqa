@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|es/ do
     resource :languages, only: [:update]
     resources :volunteers, only: [:index]
+
   end
 
 end
