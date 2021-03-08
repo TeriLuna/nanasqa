@@ -129,40 +129,4 @@ en:
     room: "Room"
     create: "Create"
     reserve: "Reserve"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> add images to active admin and showing them in index page
+    new: "New Reservation"
