@@ -32,6 +32,7 @@
 en:
   hello: "Hello world"
   login:
+    update: "Update"
     text: "Login"
     email: E-mail
     enter_your_email: "Enter your email"
@@ -39,6 +40,7 @@ en:
     password_confirmation: "Confirm Password"
     remember_me: "Remember me"
     sign_up: "Sign up"
+    confirm_new_password: "Confirm new Password"
   index:
       index_text: "Spend time and get chill in Nanasqa Hostel"
   testimonial:
@@ -116,3 +118,51 @@ en:
     requirements: "Requirements"
     requirements_text_html: "<li>Intermediate English or Beginner Spanish</li><li>Between 18 and 80 years old</li><li>Accepts solo applications and also couples and pairs</li><li>Stay at least 2 weeks</li>"
     our_platforms: "Our platforms"
+    requirements_text_html: "<li>Intermediate English or Beginner Spanish</li>
+            <li>Between 18 and 80 years old</li>
+            <li>Accepts solo applications and also couples and pairs</li>
+            <li>Stay at least 2 weeks</li>"
+  reservations:
+    start_date: "Start Date"
+    end_date: "End Date"
+    message: "Message"
+    room: "Room"
+    create: "Create"
+    reserve: "Reserve"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> add images to active admin and showing them in index page

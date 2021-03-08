@@ -1,0 +1,42 @@
+<div class="section">
+  <div class="container">
+    <!-- Products -->
+    <%- @rooms.each do |room| %>
+      <div class="row col-spacing-30">
+        <div class="col-6 col-sm-6 col-lg-4">
+          <div class="product-box">
+            <div class="product-img">
+              <!-- Product IMG -->
+              <%= link_to new_reservation_path(room_id: room.id), class: "product-img-link" do %>
+                <%= image_tag room.default_main_image %>
+              <%- end %>
+
+              <!-- <div class="product-badge-left">
+                <span>New</span>
+              </div>
+              <div class="product-badge-right red">
+                <span>-50%</span>
+              </div> -->
+              <div class="add-to-cart">
+                <%= link_to t('reservation.reserve'), new_reservation_path(room_id: room.id), class: "product-img-link" %>
+              </div>
+            </div>
+            <div class="product-title">
+              <h6 class="font-weight-medium">
+                <%= link_to room.name, new_reservation_path(room_id: room.id), class: "product-img-link" %>
+              </h6>
+              <div class="price">
+                <span>$<%= room.price_per_person %></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-lg-4">
+          <p>
+            <%= room.description %>
+          </p>
+        </div>
+      </div>
+    <%- end %>
+  </div>
+</div>

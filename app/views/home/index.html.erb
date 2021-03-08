@@ -9,11 +9,10 @@
 	              <h1 class="display-2 font-family-tertiary font-weight-black">
 	                <%= t('index.index_text')%>
 	              </h1>
-	              <a class="button button-lg button-radius button-white margin-top-30 margin-right-20" href="#first">
-	              	<i class="ti-bookmark-alt">
-	              	</i>
-	              	<%= t('reservation.book_now')%>
-	              </a>
+	              <%= link_to new_reservation_path, class: "button button-lg button-radius button-outline-white-2 margin-top-30 margin-right-" do %>
+                	<i class="ti-bookmark-alt"></i>
+                	<%= t('reservation.book_now')%>
+                <%- end %>
 	              <a class="button button-lg button-radius button-white margin-top-30" href="#first">
 	              	<i class="ti-face-smile">
 	              	</i>
@@ -52,7 +51,9 @@
 				<!-- Icon text box 1 -->
 				<div class="margin-bottom-30 icon-4xl">
 					<i class="ti-star text-dark"></i>
-					<h6 class="font-family-tertiary font-small font-weight-normal uppercase margin-top-20"><%= t('features.stars')%></h6>
+					<h6 class="font-family-tertiary font-small font-weight-normal uppercase margin-top-20">
+						<%= t('features.stars')%>
+					</h6>
 					<p><%= t('features.stars_text')%></p>
 				</div>
 				<!-- Icon text box 2 -->
