@@ -766,7 +766,7 @@ $(".qnt-button").on("click", function(e) {
     }
   }
 
-  $button.parent().find("input").val(newVal);
+  $button.parent().find("input").val(newVal).trigger("change");
   e.preventDefault();
 
 });

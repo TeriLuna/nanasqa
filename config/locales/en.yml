@@ -30,6 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  profile:
+    title: "Profile"
   hello: "Hello world"
   login:
     update: "Update"
@@ -123,10 +125,17 @@ en:
             <li>Accepts solo applications and also couples and pairs</li>
             <li>Stay at least 2 weeks</li>"
   reservations:
+    title: "Reservation"
+    save: "Save"
     start_date: "Start Date"
+    quantity: "Quantity"
     end_date: "End Date"
     message: "Message"
     room: "Room"
     create: "Create"
     reserve: "Reserve"
     new: "New Reservation"
+    update: "Update Reservation"
+    pay: "Pay Reservation"
+    description: "Room Description"
+    messages: "Messages"

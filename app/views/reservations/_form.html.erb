@@ -1,0 +1,78 @@
+<div class="section">
+  <%- if flash.any? %>
+    <%- flash.each do |type, msg| %>
+      <%- alert = type == "alert" ? 'danger' : 'success' %>
+      <div class="alert alert-<%= alert %>  col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2" role="alert">
+        <%= msg %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="container">
+    <h3 class="font-weight-normal text-center margin-bottom-50"> Reservation </h3>
+    <div class="row">
+      <div class="col-12">
+        <div class="col-12">
+          <div class="row gallery-wrapper col-spacing-10">
+            <div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="10" data-owl-xs="1" data-owl-sm="1" data-owl-md="2" data-owl-lg="2" data-owl-xl="2">
+
+              <%- if room.images.attached? %>
+                <%- room.images.each do |img| %>
+
+                  <div class="col-12 gallery-box">
+                    <div class="gallery-img">
+                      <a href="<%= asset_path(url_for(img))%>" data-gallery-title="<%= room.name %>">
+                        <img src="<%= asset_path(url_for(img))%>" alt="">
+                      </a>
+                    </div>
+                  </div>
+
+                <%- end %>
+              <%- end %>
+
+            </div>
+          </div>
+        </div>
+
+        <%= form_for(reservation, url: reservations_path, method: :post, html: { class: "product-quantity" }) do |f| %>
+
+          <%= f.label t('reservations.quantity') %>
+          <br>
+          <div class="qnt margin-bottom-20">
+            <%= f.number_field :quantity, {min: 1, max: 10, value: reservation.quantity, class: "js-quantity"} %>
+            <a class="dec qnt-button" href="#">-</a><a class="inc qnt-button" href="#">+</a>
+          </div>
+          <br>
+
+          <div class="margin-bottom-20">
+            <%= f.label t('reservations.start_date') %>
+            <%= f.date_field :start_date %>
+          </div>
+
+          <div class="margin-bottom-20">
+            <%= f.label t('reservations.end_date') %><br />
+            <%= f.date_field :end_date %>
+          </div>
+
+          <div class="margin-bottom-20">
+            <%= f.label t('reservations.message') %><br />
+            <%= f.text_area :message %>
+          </div>
+
+          <div class="margin-bottom-20">
+            <%= f.hidden_field(:room_id, value: room.id) %>
+            <%= hidden_field_tag(:room_price_per_person, room.price_per_person,  class: "js-room-price-per-person") %>
+          </div>
+
+          <%= f.submit(
+                pay_buttom_text(reservation: reservation, show_total: true),
+                class: "button button-md button-dark js-pay-buttom",
+                data: { text: pay_buttom_text(reservation: reservation, show_total: false) }
+          )%>
+        <%- end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag "reservations/form" %>

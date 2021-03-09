@@ -8,16 +8,18 @@
     <% end %>
   <% end %>
   <div class="container">
-    <h3 class="font-weight-normal text-center margin-bottom-50"> <%= t('header.my_info')%> </h3>
+    <h3 class="font-weight-normal text-center margin-bottom-50"> <%= t('profile.title')%> </h3>
     <div class="row">
-      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-
+      <div class="col-6">
+        <h4 class="text-center">My info</h4>
         <!-- Snippet -->
         <%= form_for(@user, url: { action: "update_password" }) do |f| %>
           <%= f.label t('login.email') %>
           <%= f.email_field :email, autofocus: true, placeholder: t('login.enter_your_email') %>
 
+          <br>
           <%= f.label t('login.password') %><br />
+          <p><i>If you want to update your password, fill the next fields</i></p>
           <%= f.password_field :password, autocomplete: "current-password" %>
 
           <%= f.label t('login.confirm_new_password') %><br />
@@ -26,6 +28,26 @@
           <%= f.submit t('login.update'), class: "button button-md button-dark" %>
         <%- end %>
 
+      </div>
+      <div class="col-6">
+        <h4 class="text-center">Reservations</h4>
+        <div class="col-12">
+          <%- @reservations.each do |reservation| %>
+            <div class="prices-box border-0 bg-white border-radius box-shadow-with-hover">
+              <h6 class="font-weight-normal"><%= reservation.room.name %></h6>
+              <div class="price">
+                <h1 class="font-weight-normal"><%= Money.new(reservation.room.price_per_person, "USD").format %></h1>
+                <!-- <span>monthly</span> -->
+              </div>
+              <div class="price-features">
+                <p>
+                  <%= truncate(reservation.room.description, length: 100) %>
+                </p>
+                <%= link_to "See/Pay reservation", reservation_path(reservation), class: "button button-md button-dark button-rounded" %>
+              </div>
+            </div>
+          <%- end %>
+        </div>
       </div>
     </div>
   </div>

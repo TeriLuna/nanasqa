@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def index
     @user = current_user
+    @reservations = Reservation.where(user_id: User.first).includes(:room)
   end
 
   def update_password
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
         params[:user].delete(:password_confirmation)
     end
     if @user.update(user_params)
-      # Sign in the user by passing validation in case their password changed
+      # Sign in the user by passing validation in casReservation.where(user_id: User.first).includes(:room)e their password changed
       bypass_sign_in(@user, scope: :user)
       flash[:notice] = t('login.user_updated')
       redirect_to user_path(current_user)
