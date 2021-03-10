@@ -54,4 +54,5 @@ Rails.application.config.assets.precompile +=
       appear.min.js
       plugins.js
       functions.js
+      reservations/form.js
     )

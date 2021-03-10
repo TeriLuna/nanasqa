@@ -28,8 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
-
+gem 'mini_magick', '~> 4.8'
+gem 'image_processing'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -52,11 +52,14 @@ gem 'country_select', '~> 4.0'
 
 gem "font-awesome-rails"
 gem 'devise'
-
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
+  gem 'pry-byebug'
+  gem "letter_opener"
 end
 
 group :development do

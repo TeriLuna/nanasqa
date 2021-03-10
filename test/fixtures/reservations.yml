@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  room_id: 1
+  message: MyText
+  start_date: 2021-03-06 15:32:07
+  end_date: 2021-03-06 15:32:07
+
+two:
+  user_id: 1
+  room_id: 1
+  message: MyText
+  start_date: 2021-03-06 15:32:07
+  end_date: 2021-03-06 15:32:07

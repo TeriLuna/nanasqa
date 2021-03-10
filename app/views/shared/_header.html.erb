@@ -20,7 +20,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#"> <%= t('global.profile') %> </a>
             <ul class="nav-dropdown">
-              <li class="nav-dropdown-item"><%= link_to t('header.my_info'), user_path(current_user), class: "nav-dropdown-link" %></li>
+              <li class="nav-dropdown-item"><%= link_to t('header.my_info'), users_path, class: "nav-dropdown-link" %></li>
               <li class="nav-dropdown-item"><%= link_to(t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
             </ul>
           </li>
