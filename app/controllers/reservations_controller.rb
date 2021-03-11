@@ -28,7 +28,6 @@ class ReservationsController < ApplicationController
   def create
     @room = Room.where(id: reservation_params[:room_id]).first
     if @room.present?
-      binding.pry
       if @room.is_available?(start_date: reservation_params[:start_date], end_date: reservation_params[:end_date])
         @reservation = Reservation.
           first_or_initialize(user_id: current_user.id, room_id: @room.id)
