@@ -69,7 +69,8 @@ en:
     volunteer: "Be a volunteer"
   reservation:
     book_now: "Book now!"
-    fun: "Let's get fun!"
+    ong: "Know about our ONG!"
+    volunteer: "Be a volunteer!"
   features:
     stars: "Look the at stars!"
     stars_text: "You will be able to admire the wonderful sky full of bright stars in the best places of Nazca."
@@ -139,3 +140,4 @@ en:
     pay: "Pay Reservation"
     description: "Room Description"
     messages: "Messages"
+

@@ -39,7 +39,7 @@
     </div> <!-- END IMG Section -->
     <div class="section">
       <div class="row align-items-start padding-bottom-0">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <%= form_for(reservation, url: reservations_path, method: :post, html: { class: "product-quantity" }) do |f| %>
 
             <%= f.label t('reservations.number_of_people') %>
@@ -78,10 +78,15 @@
           <%- end %>
         </div>
         <!-- Calendar Section -->
-        <div class="text-center">
-          <div class="col-6 bg-grey">
-            <h3>Dates on grey are NOT available</h3>
-            <div class="js-datepicker"></div>
+
+
+
+        <div class="col-12 col-md-6">
+          <h3 class="bg-grey padding-20 border-radius-05 margin-bottom-40">Dates on grey are <u>NOT</u> available</h3>
+          <div class="">
+            <div class="text-center">
+              <div class="js-datepicker"></div>
+            </div>
           </div>
         </div> <!-- END Calendar Section -->
       </div>

@@ -1,6 +1,6 @@
 <!-- Home section -->
 <div class="bg-dark owl-carousel owl-nav-overlay owl-dots-overlay" data-owl-nav="false" data-owl-dots="false" data-owl-items="1" data-owl-autoPlay="true">
-	<%- ['nanasqa-1.jpg', 'nanasqa-3.jpg', 'nanasqa-2.jpg', 'nanasqa-4.jpg'].each do |image_name| %>
+	<%- ['nanasqa-3.jpg', 'nanasqa-2.jpg', 'nanasqa-4.jpg'].each do |image_name| %>
 	  <div class="section-fullscreen bg-image", data-bg-src= "<%= asset_url(image_name)%>">
 	    <div class="container text-center">
 	      <div class="position-middle">
@@ -14,10 +14,13 @@
                 	<%= t('reservation.book_now')%>
                 <%- end %>
 	              <a class="button button-lg button-radius button-white margin-top-30" href="#first">
-	              	<i class="ti-face-smile">
-	              	</i>
-	              	<%= t('reservation.fun')%>
+	              	<i class="ti-heart"></i>
+	              	<%= t('reservation.ong')%>
 	              </a>
+	              <%= link_to volunteers_path, class: "button button-lg button-radius button-white margin-top-30" do %>
+	              	<i class="ti-face-smile"></i>
+	              	<%= t('reservation.volunteer')%>
+	              <%- end %>
 	          </div>
 	        </div>
 	      </div>
@@ -86,9 +89,9 @@
 <!-- end Features section -->
 
 <!-- Testimonial section -->
-<div class="section-lg bg-black-03">
+<div class="section bg-black-03">
 	<div class="container">
-		<div class="owl-carousel" data-owl-dots="false" data-owl-margin="30" data-owl-xs="1" data-owl-sm="1" data-owl-md="1" data-owl-lg="2" data-owl-xl="2" data-owl-nav="true">
+		<div class="owl-carousel" data-owl-dots="false" data-owl-margin="30" data-owl-xs="1" data-owl-sm="1" data-owl-md="2" data-owl-lg="2" data-owl-xl="2" data-owl-nav="true">
 			<!-- Testimonial box 1 -->
 			<div class="bg-black-07 border-radius padding-30">
 				<div class="d-flex align-items-center justify-content-between margin-bottom-20">
