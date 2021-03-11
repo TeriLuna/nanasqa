@@ -32,31 +32,63 @@
           <p>Quantity: <%= @reservation.quantity %></p>
           <p>Start Date: <%= @reservation.start_date.strftime("%d - %B - %Y") %></p>
           <p>End Date: <%= @reservation.end_date.strftime("%d - %B - %Y") %></p>
-          <%= link_to pay_buttom_text(reservation: @reservation, show_total: true), edit_reservation_path(@reservation), class: "button button-md button-dark" %>
-          <%= link_to "Edit reservation", edit_reservation_path(@reservation), class: "button button-md button-grey" %>
+          <%- if @reservation.approved? %>
+            <%= link_to "Paid", reservation_path(@reservation), class: "button button-md button-grey" %>
+          <%- else %>
+            <script
+              src="https://www.mercadopago.com.pe/integrations/v1/web-payment-checkout.js"
+              data-preference-id="<%= @preference_id %>">
+            </script>
+            <%= link_to pay_buttom_text(reservation: @reservation, show_total: true, show_text: true), reservation_path(@reservation), class: "button button-md button-dark" %>
+            <%= link_to "Edit reservation", edit_reservation_path(@reservation), class: "button button-md button-grey" %>
+          <%- end %>
+
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container margin-bottom-50">
-  <div class="product-info-box">
-    <ul class="nav margin-bottom-20">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#additional-info"><%= t('reservations.description') %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#messages"><%= t('reservations.messages') %></a>
-      </li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane fade show active" id="additional-info">
-        <p><%= @reservation.room.description %></p>
-      </div>
-      <div class="tab-pane fade" id="messages">
-        <button class="button button-md button-dark" type="submit">Send message to the admins</button>
-      </div>
+<div class="section">
+  <div class="container margin-bottom-50">
+    <div class="product-info-box">
+      <ul class="nav margin-bottom-20">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#additional-info"><%= t('reservations.description') %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#messages"><%= t('reservations.messages') %></a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="additional-info">
+          <p><%= @reservation.room.description %></p>
+        </div>
+
+        <div class="tab-pane fade" id="messages">
+          <div class="section">
+            <div class="container bg-grey">
+              <div class="text-left">
+                <div class="row">
+                  <div class="col-12">
+                    <p>hola</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container bg-dark">
+              <div class="text-right">
+                <div class="row">
+                  <div class="col-12">
+                    <p>hola!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
     </div>
   </div>
 </div>

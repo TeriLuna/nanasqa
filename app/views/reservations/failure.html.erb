@@ -1,0 +1,47 @@
+<div class="section-xl">
+  <div class="col-12 col-xl-8">
+    <div class="bg-grey padding-20 padding-md-30 padding-lg-40">
+      <h3 class="font-weight-medium">
+        <div style="color: red;">
+          Order Failed
+        </div>
+      </h3>
+      <!-- <a class="button button-md button-dark button-fullwidth margin-top-20" href="#">Place order</a> -->
+    </div>
+    <div class="bg-grey padding-20 padding-md-30 padding-lg-40">
+      <h5 class="font-weight-medium">Your order</h5>
+      <table class="table cart-totals">
+        <tbody>
+          <tr>
+            <th scope="row">Product name</th>
+            <td><%= @reservation.room.name %></td>
+          </tr>
+          <tr>
+            <th scope="row">Subtotal x 1</th>
+            <td>$<%= @reservation.room.price_per_person%></td>
+          </tr>
+          <tr>
+            <th scope="row">Number of people</th>
+            <td>
+              <p><%= @reservation.quantity %></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Dates:</th>
+            <td>
+                <p><%= @reservation.start_date.strftime("%d - %B - %Y") %></p>
+                <p><%= @reservation.end_date.strftime("%d - %B - %Y") %></p>
+                <p>count: <%= @reservation.number_or_nigths %></p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Total</th>
+            <td>$<%= @reservation.total %></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <a class="button button-md button-dark button-fullwidth margin-top-20" href="#">Place order</a> -->
+    </div>
+  </div>
+
+</div>

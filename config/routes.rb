@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|es/ do
     resource :languages, only: [:update]
     resources :volunteers, only: [:index]
-    resources :reservations
+    resources :reservations do
+      get '/success' => "reservations#success"
+      get '/failure' => "reservations#failure"
+      get '/pending' => "reservations#pending"
+    end
+
     resources :users, only: [:index] do
       collection do
         patch 'update_password'

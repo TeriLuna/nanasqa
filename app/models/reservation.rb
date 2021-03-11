@@ -1,8 +1,11 @@
 class Reservation < ApplicationRecord
+  enum status: { created: 0, failed: 1, approved: 2 }
+
   validates :start_date, presence: true
   validates :end_date, presence: true
 
   validate :end_date_is_after_start_date
+  validate :is_available?
 
   belongs_to :room
   belongs_to :user
@@ -15,6 +18,10 @@ class Reservation < ApplicationRecord
     if end_date < start_date
       errors.add(:end_date, "cannot be before the start date")
     end
+  end
+
+  def number_or_nigths
+    (self.end_date.to_date - self.start_date.to_date).to_i
   end
 
 end

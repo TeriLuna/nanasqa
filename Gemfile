@@ -53,6 +53,7 @@ gem 'country_select', '~> 4.0'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'rack-cors', require: 'rack/cors'
+gem 'mercadopago-sdk'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

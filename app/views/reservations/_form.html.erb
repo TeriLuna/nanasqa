@@ -32,44 +32,53 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="col-6">
+          <%= form_for(reservation, url: reservations_path, method: :post, html: { class: "product-quantity" }) do |f| %>
 
-        <%= form_for(reservation, url: reservations_path, method: :post, html: { class: "product-quantity" }) do |f| %>
+            <%= f.label t('reservations.number_of_people') %>
+            <br>
+            <div class="qnt margin-bottom-20">
+              <%= f.number_field :quantity, {min: 1, max: 10, value: reservation.quantity, class: "js-quantity"} %>
+              <a class="dec qnt-button" href="#">-</a><a class="inc qnt-button" href="#">+</a>
+            </div>
+            <br>
 
-          <%= f.label t('reservations.quantity') %>
-          <br>
-          <div class="qnt margin-bottom-20">
-            <%= f.number_field :quantity, {min: 1, max: 10, value: reservation.quantity, class: "js-quantity"} %>
-            <a class="dec qnt-button" href="#">-</a><a class="inc qnt-button" href="#">+</a>
-          </div>
-          <br>
+            <div class="margin-bottom-20">
+              <%= f.label t('reservations.start_date') %>
+              <%= f.date_field :start_date %>
+            </div>
 
-          <div class="margin-bottom-20">
-            <%= f.label t('reservations.start_date') %>
-            <%= f.date_field :start_date %>
-          </div>
+            <div class="margin-bottom-20">
+              <%= f.label t('reservations.end_date') %><br />
+              <%= f.date_field :end_date %>
+            </div>
 
-          <div class="margin-bottom-20">
-            <%= f.label t('reservations.end_date') %><br />
-            <%= f.date_field :end_date %>
-          </div>
+            <div class="margin-bottom-20">
+              <%= f.label t('reservations.message') %><br />
+              <%= f.text_area :message %>
+            </div>
 
-          <div class="margin-bottom-20">
-            <%= f.label t('reservations.message') %><br />
-            <%= f.text_area :message %>
-          </div>
+            <div class="margin-bottom-20">
+              <%= f.hidden_field(:room_id, value: room.id) %>
+              <%= hidden_field_tag(:room_price_per_person, room.price_per_person,  class: "js-room-price-per-person") %>
+            </div>
 
-          <div class="margin-bottom-20">
-            <%= f.hidden_field(:room_id, value: room.id) %>
-            <%= hidden_field_tag(:room_price_per_person, room.price_per_person,  class: "js-room-price-per-person") %>
-          </div>
+            <%= f.submit(
+                  pay_buttom_text(reservation: reservation, show_total: true),
+                  class: "button button-md button-dark js-pay-buttom",
+                  data: { text: pay_buttom_text(reservation: reservation, show_total: false) }
+            )%>
+          <%- end %>
+        </div>
 
-          <%= f.submit(
-                pay_buttom_text(reservation: reservation, show_total: true),
-                class: "button button-md button-dark js-pay-buttom",
-                data: { text: pay_buttom_text(reservation: reservation, show_total: false) }
-          )%>
-        <%- end %>
-
+        <div class="col-6 bg-grey">
+          <h3>Dates on grey are NOT available</h3>
+          <div class="js-datepicker"></div>
+        </div>
       </div>
     </div>
   </div>

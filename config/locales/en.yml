@@ -128,7 +128,7 @@ en:
     title: "Reservation"
     save: "Save"
     start_date: "Start Date"
-    quantity: "Quantity"
+    number_of_people: "Number of People"
     end_date: "End Date"
     message: "Message"
     room: "Room"

@@ -8,4 +8,12 @@ class Room < ApplicationRecord
   def default_main_image
     main_image.attached? ? main_image : "nanasqa-"+ [1,2,3,4].sample.to_s + ".jpg"
   end
+
+  def is_available?
+    joins(:reservations)
+    #
+  end
+  def is_available?(start_date:, end_date:)
+    Room.eager_load(:reservations).where("reservations.start_date <= ? AND reservations.end_date <= ?", start_date, end_date)
+  end
 end

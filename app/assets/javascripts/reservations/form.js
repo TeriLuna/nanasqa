@@ -8,6 +8,23 @@ $( document ).ready(function() {
       console.log(total)
       var format_total = payButtom.data("text").replace("_total_", total)
       payButtom.prop("value", format_total);
+
     })
+
+    var unavailableDates = ["20-3-2021", "14-3-2021", "15-3-2021"];
+
+    function unavailable(date) {
+        dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+        if ($.inArray(dmy, unavailableDates) == -1) {
+            return [true, ""];
+        } else {
+            return [false, "", "Unavailable"];
+        }
+    }
+
+    $(".js-datepicker").datepicker({
+        dateFormat: 'dd MM yy',
+        beforeShowDay: unavailable
+    });
   })()
 });
