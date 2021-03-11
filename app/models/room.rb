@@ -14,6 +14,6 @@ class Room < ApplicationRecord
     #
   end
   def is_available?(start_date:, end_date:)
-    Room.eager_load(:reservations).where("reservations.start_date <= ? AND reservations.end_date <= ?", start_date, end_date)
+    Room.eager_load(:reservations).where("reservations.start_date <= ? AND reservations.end_date <= ? AND rooms.id = ?", start_date, end_date, self.id).any?
   end
 end

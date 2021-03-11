@@ -5,7 +5,6 @@ class Reservation < ApplicationRecord
   validates :end_date, presence: true
 
   validate :end_date_is_after_start_date
-  validate :is_available?
 
   belongs_to :room
   belongs_to :user

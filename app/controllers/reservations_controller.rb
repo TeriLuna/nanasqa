@@ -22,41 +22,28 @@ class ReservationsController < ApplicationController
   def show
     # Is passing the user for segurity TODO: use cancancan
     @reservation = Reservation.where(user_id: current_user.id, id: params[:id]).includes(room: { images_attachments: :blob }).first
-
-    preference_data = {
-      "items": [
-        {
-          "title": @reservation.room.name,
-          "unit_price": (@reservation.room.price_per_person.to_f * @reservation.number_or_nigths),
-          "quantity": @reservation.quantity
-        }
-      ],
-      "back_urls": {
-        "success": ENV['HOST_DOMAIN'] + reservation_success_path(reservation_id: @reservation.id),
-        "failure": ENV['HOST_DOMAIN'] + reservation_failure_path(reservation_id: @reservation.id),
-        "pending": ENV['HOST_DOMAIN'] + reservation_pending_path(reservation_id: @reservation.id)
-      }
-    }
-
-    preference = $mercado_pago.create_preference(preference_data)
-
-    # Este valor reemplazará el string "<%= @preference_id %>" en tu HTML
-    @preference_id = preference["response"]["id"]
+    @preference_id = generate_mercado_pago_preference(@reservation)
   end
 
   def create
     @room = Room.where(id: reservation_params[:room_id]).first
-
     if @room.present?
-      @reservation = Reservation.
-        first_or_initialize(user_id: current_user.id, room_id: @room.id)
+      binding.pry
+      if @room.is_available?(start_date: reservation_params[:start_date], end_date: reservation_params[:end_date])
+        @reservation = Reservation.
+          first_or_initialize(user_id: current_user.id, room_id: @room.id)
 
-      @reservation.attributes = reservation_params
-      @reservation.total = calculate_total(@room, @reservation)
-      if @reservation.save
-        redirect_to reservation_path(@reservation)
+        @reservation.attributes = reservation_params
+        @reservation.total = calculate_total(@room, @reservation)
+        if @reservation.save
+          redirect_to reservation_path(@reservation)
+        else
+          flash.now[:error] = @reservation.errors.full_messages.to_sentence
+          render :new
+        end
       else
-        flash.now[:error] = @reservation.errors.full_messages.to_sentence
+        @reservation = Reservation.new(reservation_params)
+        flash.now[:alert] = "Room not available in these dates"
         render :new
       end
     end
@@ -103,5 +90,27 @@ class ReservationsController < ApplicationController
     per_person  = room.price_per_person
     quantity    = reservation.quantity
     (per_person * quantity * number_of_nigths)
+  end
+
+  def generate_mercado_pago_preference(reservation)
+    preference_data = {
+      "items": [
+        {
+          "title": reservation.room.name,
+          "unit_price": (reservation.room.price_per_person.to_f * reservation.number_or_nigths),
+          "quantity": reservation.quantity
+        }
+      ],
+      "back_urls": {
+        "success": ENV['HOST_DOMAIN'] + reservation_success_path(reservation_id: reservation.id),
+        "failure": ENV['HOST_DOMAIN'] + reservation_failure_path(reservation_id: reservation.id),
+        "pending": ENV['HOST_DOMAIN'] + reservation_pending_path(reservation_id: reservation.id)
+      }
+    }
+
+    preference = $mercado_pago.create_preference(preference_data)
+
+    # Este valor reemplazará el string "<%= @preference_id %>" en tu HTML
+    preference["response"]["id"]
   end
 end
