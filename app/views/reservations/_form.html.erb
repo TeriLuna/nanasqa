@@ -50,15 +50,14 @@
             </div>
             <br>
 
-            <div class="margin-bottom-20">
+            <div class="margin-bottom-20 js-datepicker-conteiner" data-unavailables-dates="<%= room.unavailables_dates %>">
               <%= f.label t('reservations.checkin_checkout') %>
-              <%= f.text_field :start_date, class: "", id: "" %>
+              <%= f.text_field :start_date, id: "js-datepicker-id" %>
             </div>
 
             <div class="margin-bottom-20">
-              <%= f.label t('reservations.end_date') %><br />
               <div>
-                <%= f.text_field :end_date, id: "js-datepicker-id" %>
+                <%= f.hidden_field :end_date %>
               </div>
             </div>
 
