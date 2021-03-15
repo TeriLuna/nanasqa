@@ -11,20 +11,38 @@ $( document ).ready(function() {
 
     })
 
-    var unavailableDates = ["20-3-2021", "14-3-2021", "15-3-2021"];
+    var start_date = $(".js-datepicker-conteiner").data("unavailables-dates")[0];
+    var end_date = $(".js-datepicker-conteiner").data("unavailables-dates")[1];
+    var unavailableDates = [];
 
-    function unavailable(date) {
-        dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-        if ($.inArray(dmy, unavailableDates) == -1) {
-            return [true, ""];
-        } else {
-            return [false, "", "Unavailable"];
-        }
+    for (var d = new Date(start_date.split("-")[2], start_date.split("-")[1] - 1 , start_date.split("-")[0]); d <= new Date(end_date.split("-")[2], (parseInt(end_date.split("-")[1]) - 1), end_date.split("-")[0]); d.setDate(d.getDate() + 1)) {
+      d = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+      d = new Date(d)
+      unavailableDates.push(d);
     }
 
-    $(".js-datepicker").datepicker({
-        dateFormat: 'dd MM yy',
+    var unavailable = function (date) {
+      console.log(date)
+      dmy = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+      unavailableDatesString = []
+      $.each(unavailableDates, function(i, date){
+        var date = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate()
+        unavailableDatesString.push(date)
+      })
+
+      if ($.inArray(dmy, unavailableDatesString) == -1) {
+        return [true, ""];
+      } else {
+        return [false, "", "Booked"];
+      }
+    }
+
+    $("#js-datepicker-id").dateRangePicker(
+      {
+        format: "DD/MM/Y",
+        dateFormat: "DD/MM/Y",
         beforeShowDay: unavailable
-    });
+      }
+    );
   })()
 });

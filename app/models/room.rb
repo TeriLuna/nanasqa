@@ -13,7 +13,12 @@ class Room < ApplicationRecord
     joins(:reservations)
     #
   end
+
   def is_available?(start_date:, end_date:)
-    Room.eager_load(:reservations).where("reservations.start_date <= ? AND reservations.end_date <= ? AND rooms.id = ?", start_date, end_date, self.id).any?
+    Room.eager_load(:reservations).where("reservations.start_date >= ? AND reservations.end_date <= ? AND rooms.id = ?", start_date, end_date, self.id).any?
+  end
+
+  def unavailables_dates
+    Reservation.where(room_id: self.id).select("start_date", "end_date").map{|e| [e.start_date.strftime("%d-%m-%Y"), e.end_date.strftime("%d-%m-%Y")]}.flatten.uniq
   end
 end

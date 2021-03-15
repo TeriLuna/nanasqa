@@ -51,13 +51,15 @@
             <br>
 
             <div class="margin-bottom-20">
-              <%= f.label t('reservations.start_date') %>
-              <%= f.date_field :start_date %>
+              <%= f.label t('reservations.checkin_checkout') %>
+              <%= f.text_field :start_date, class: "", id: "" %>
             </div>
 
             <div class="margin-bottom-20">
               <%= f.label t('reservations.end_date') %><br />
-              <%= f.date_field :end_date %>
+              <div>
+                <%= f.text_field :end_date, id: "js-datepicker-id" %>
+              </div>
             </div>
 
             <div class="margin-bottom-20">
@@ -77,18 +79,6 @@
             )%>
           <%- end %>
         </div>
-        <!-- Calendar Section -->
-
-
-
-        <div class="col-12 col-md-6">
-          <h3 class="bg-grey padding-20 border-radius-05 margin-bottom-40">Dates on grey are <u>NOT</u> available</h3>
-          <div class="">
-            <div class="text-center">
-              <div class="js-datepicker"></div>
-            </div>
-          </div>
-        </div> <!-- END Calendar Section -->
       </div>
     </div>
   </div>

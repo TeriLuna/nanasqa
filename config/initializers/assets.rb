@@ -24,6 +24,7 @@ Rails.application.config.assets.precompile +=
       plugins/themify/themify-icons.css
       plugins/simple-line-icons/css/simple-line-icons.css
       chat.css
+      daterangepicker.css
 
       plugins/font-awesome/webfonts/fa-brands-400.eot
       plugins/font-awesome/webfonts/fa-brands-400.svg
@@ -55,4 +56,6 @@ Rails.application.config.assets.precompile +=
       plugins.js
       functions.js
       reservations/form.js
+      moment.js
+      daterangepicker.js
     )
