@@ -13,10 +13,10 @@
                 	<i class="ti-bookmark-alt"></i>
                 	<%= t('reservation.book_now')%>
                 <%- end %>
-	              <a class="button button-lg button-radius button-white margin-top-30" href="#first">
+	              <%= link_to ongs_path, class: "button button-lg button-radius button-white margin-top-30" do %>
 	              	<i class="ti-heart"></i>
 	              	<%= t('reservation.ong')%>
-	              </a>
+	              <%- end %>
 	              <%= link_to volunteers_path, class: "button button-lg button-radius button-white margin-top-30" do %>
 	              	<i class="ti-face-smile"></i>
 	              	<%= t('reservation.volunteer')%>
