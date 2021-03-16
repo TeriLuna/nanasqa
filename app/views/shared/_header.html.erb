@@ -18,7 +18,7 @@
       <ul class="nav list-inline">
         <%- if user_signed_in? %>
           <li class="nav-item">
-            <a class="nav-link" href="#"> <%= t('global.profile') %> </a>
+            <a class="nav-link text-dark" href="#"> <%= t('global.profile') %> </a>
             <ul class="nav-dropdown">
               <li class="nav-dropdown-item"><%= link_to t('header.my_info'), users_path, class: "nav-dropdown-link" %></li>
               <li class="nav-dropdown-item"><%= link_to(t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
@@ -26,67 +26,41 @@
           </li>
           <%- else %>
           <li class="nav-item">
-            <%= link_to(new_user_session_path, class: "nav-link no-underline") do %>
+            <%= link_to(new_user_session_path, class: "nav-link no-underline text-dark") do %>
               <i class="fa fa-user"></i>
             <%- end %>
           </li>
         <%- end %>
         <li class="nav-item">
-          <a class="nav-link no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/">
+          <a class="nav-link text-dark font-weight-bold no-underline" href="#">Nanasqa</a>
+          <ul class="nav-dropdown">
+            <li class="nav-dropdown-item">
+              <%= link_to(t('reservation.book_now'), reservations_path, class: 'nav-dropdown-link')%>
+              <%= link_to(t('reserve.volunteer'), volunteers_path, class: 'nav-dropdown-link')%>
+              <%= link_to(t('reservation.ong'), ongs_path, class: 'nav-dropdown-link')%>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link no-underline text-dark" target="_blanck" href="https://www.facebook.com/nanasqa/">
             <i class="fab fa-facebook-f"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link no-underline" target="_blanck" href="https://twitter.com/nanasqa">
+          <a class="nav-link no-underline text-dark" target="_blanck" href="https://twitter.com/nanasqa">
             <i class="fab fa-twitter"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/">
+          <a class="nav-link no-underline text-dark" target="_blanck" href="https://www.instagram.com/nanasqa/">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </li>
         <li class="nav-item">
-          <%= link_to"EN", url_for( locale: 'en' ), class: "nav-link no-underline text-blond" %>
+          <%= link_to"EN", url_for( locale: 'en' ), class: "nav-link no-underline font-weight-bold text-dark" %>
         </li>
         <li class="nav-item">
-          <%= link_to "ES", url_for( locale: 'es' ), class: "nav-link no-underline text-blond" %>
-        </li>
-
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Link Only</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dropdown</a>
-          <ul class="nav-dropdown">
-            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-            <li class="nav-dropdown-item"><a class="nav-dropdown-link" href="#">Dropdown Item</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Subdropdown</a>
-          <ul class="nav-dropdown">
-            <li class="nav-dropdown-item">
-              <a class="nav-dropdown-link" href="#">Dropdown Item</a>
-              <ul class="nav-subdropdown">
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-              </ul>
-            </li>
-            <li class="nav-dropdown-item">
-              <a class="nav-dropdown-link" href="#">Dropdown Item</a>
-              <ul class="nav-subdropdown">
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-                <li class="nav-subdropdown-item"><a class="nav-subdropdown-link" href="#">Subdropdown Item</a></li>
-              </ul>
-            </li>
-          </ul> -->
+          <%= link_to "ES", url_for( locale: 'es' ), class: "nav-link no-underline font-weight-bold text-dark" %>
         </li>
       </ul>
     </div>

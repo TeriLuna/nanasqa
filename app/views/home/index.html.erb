@@ -1,47 +1,41 @@
 <!-- Home section -->
 <div class="bg-dark owl-carousel owl-nav-overlay owl-dots-overlay" data-owl-nav="false" data-owl-dots="false" data-owl-items="1" data-owl-autoPlay="true">
 	<%- ['nanasqa-3.jpg', 'nanasqa-2.jpg', 'nanasqa-4.jpg'].each do |image_name| %>
-	  <div class="section-fullscreen bg-image", data-bg-src= "<%= asset_url(image_name)%>">
-	    <div class="container text-center">
-	      <div class="position-middle">
-	        <div class="row">
-	          <div class="col-12 padding-60">
-	              <h1 class="display-2 font-family-tertiary font-weight-black">
-	                <%= t('index.index_text')%>
-	              </h1>
-	              <%= link_to reservations_path, class: "button button-lg button-radius button-white margin-top-30 margin-right-" do %>
-                	<i class="ti-bookmark-alt"></i>
-                	<%= t('reservation.book_now')%>
-                <%- end %>
-	              <%= link_to ongs_path, class: "button button-lg button-radius button-white margin-top-30" do %>
-	              	<i class="ti-heart"></i>
-	              	<%= t('reservation.ong')%>
-	              <%- end %>
-	              <%= link_to volunteers_path, class: "button button-lg button-radius button-white margin-top-30" do %>
-	              	<i class="ti-face-smile"></i>
-	              	<%= t('reservation.volunteer')%>
-	              <%- end %>
-	          </div>
-	        </div>
-	      </div>
-        <div class="position-bottom">
-    			<a class="icon-xl" href="#first">
-    				<i class="ti-angle-down"></i>
-    			</a>
-    		</div>
+	  <div class="section-fullscreen bg-image bg-image-gradient-top", data-bg-src= "<%= asset_url(image_name)%>">
+	    <div class="bg-white-06">
+		    <div class="container text-center">
+		      <div class="position-middle">
+		        <div class="row">
+		          <div class="col-12 padding-60">
+		              <h1 class="display-2 font-family-tertiary font-weight-black">
+		                <%= t('index.index_text')%>
+		              </h1>
+		              <%= link_to ongs_path, class: "button button-lg button-radius button-white margin-top-30" do %>
+		              	<i class="ti-heart"></i>
+		              	<%= t('reservation.ong')%>
+		              <%- end %>
+  	              <%= link_to reservations_path, class: "button button-lg button-radius button-dark margin-top-30 margin-right-" do %>
+                  	<i class="ti-bookmark-alt"></i>
+                  	<%= t('reservation.book_now')%>
+                  <%- end %>
+		              <%= link_to volunteers_path, class: "button button-lg button-radius button-white margin-top-30" do %>
+		              	<i class="ti-face-smile"></i>
+		              	<%= t('reservation.volunteer')%>
+		              <%- end %>
+		          </div>
+		        </div>
+		      </div>
+	        <div class="position-bottom">
+	    			<a class="icon-xl" href="#first">
+	    				<i class="ti-angle-down"></i>
+	    			</a>
+	    		</div>
+		    </div>
 	    </div>
 	  </div>
 	<%- end %>
 </div>
 <!-- end Home section -->
-
-<!-- Parallax 1 section -->
-<!-- <div class="video-test">
-	<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-	  <source src="<%= asset_url('video.MP4') %>" type="video/mp4">
-	</video>
-</div> -->
-<!-- End Parallax 1 section -->
 
 <!-- Features section -->
 <div id="first" class="section-md">
@@ -286,4 +280,8 @@
 </div>
 <!-- end Testimonial section -->
 
-<!-- end Prices section -->
+<!-- Maps Section -->
+<div class="section">
+	<div id="map1" class="gmap gmap-xs" data-latitude="51.513569" data-longitude="-0.123443"></div>
+</div> -->
+

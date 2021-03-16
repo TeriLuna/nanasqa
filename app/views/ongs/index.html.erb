@@ -1,7 +1,7 @@
-<div class="section-xl bg-image parallax" data-bg-src="../assets/images/background.jpg">
-  <div class="bg-black-06">
+<div class="section-xl bg-image parallax" data-bg-src="<%= asset_url'reverse.PNG'%>">
+  <!-- <div class="bg-white-03"> -->
     <div class="container text-center">
-      <h1 class="font-weight-light margin-0"><%= t('ong.project_name')%></h1>
+      <!-- <h1 class="font-weight-light margin-0"><%= t('ong.project_name')%></h1> -->
     </div><!-- end container -->
   </div>
 </div>
@@ -12,65 +12,72 @@
     <div class="row text-center icon-4xl">
       <!-- Icon text box 1 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-        <i class="ti-check-box text-dark margin-bottom-20"></i>
-        <h6 class="font-weight-normal margin-0">Feature One</h6>
+        <i class="ti-comments-smiley text-dark margin-bottom-20"></i>
+        <h6 class="font-weight-normal margin-0"><%= t('ong.sponsor')%></h6>
       </div>
       <!-- Icon text box 2 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-        <i class="ti-check-box text-dark margin-bottom-20"></i>
-        <h6 class="font-weight-normal margin-0">Feature Two</h6>
+        <i class="ti-brush text-dark margin-bottom-20"></i>
+        <h6 class="font-weight-normal margin-0"><%= t('ong.help_community')%></h6>
       </div>
       <!-- Icon text box 3 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-        <i class="ti-check-box text-dark margin-bottom-20"></i>
-        <h6 class="font-weight-normal margin-0">Feature Three</h6>
+        <i class="ti-mobile text-dark margin-bottom-20"></i>
+        <h6 class="font-weight-normal margin-0"><%= t('ong.social_media')%></h6>
       </div>
       <!-- Icon text box 4 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-        <i class="ti-check-box text-dark margin-bottom-20"></i>
-        <h6 class="font-weight-normal margin-0">Feature Four</h6>
+        <i class="ti-star text-dark margin-bottom-20"></i>
+        <h6 class="font-weight-normal margin-0"><%= t('ong.soocial_marketing')%></h6>
       </div>
       <!-- Icon text box 5 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-        <i class="ti-check-box text-dark margin-bottom-20"></i>
-        <h6 class="font-weight-normal margin-0">Feature Five</h6>
+        <i class="ti-camera text-dark margin-bottom-20"></i>
+        <h6 class="font-weight-normal margin-0"><%= t('ong.publicity')%></h6>
       </div>
       <!-- Icon text box 6 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-        <i class="ti-check-box text-dark margin-bottom-20"></i>
-        <h6 class="font-weight-normal margin-0">Feature Six</h6>
+        <i class="ti-ruler-pencil text-dark margin-bottom-20"></i>
+        <h6 class="font-weight-normal margin-0"><%= t('ong.make_deal')%></h6>
       </div>
     </div><!-- end row -->
   </div><!-- end container -->
 </div>
 <!-- end Features section -->
 
-<div class="section-xs">
+<div class="section-xs border-top">
   <div class="container">
     <div class="row text-justify">
       <div class="col-12">
-        <h6><%= t('ong.about_reverse_html')%></h6>
-        <h6><%= t('ong.about_reverse2_html')%></h6>
-        <h6><%= t('ong.about_reverse3_html')%></h6>
+        <p class="font-large"><%= t('ong.about_reverse_html')%></p>
+        <p class="font-large"><%= t('ong.about_reverse2_html')%></p>
+        <p class="font-large"><%= t('ong.about_reverse3_html')%></p>
       </div>
+      <a class="button button-lg button-rounded button-reveal-right-dark margin-top-0" href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to be a volunteer in Nanasqa Hostel! / Hola! Me gustaría ser voluntari@ en Nanasqa Hostel" target="_blank">
+        <span>
+          <%= t('volunteer.get_in_touch')%>
+        </span>
+        <i class="ti-arrow-right"></i>
+      </a>
     </div>
   </div>
 </div>
 
 <!-- section -->
-<div class="section border-top">
+<div class="section">
   <div class="container">
 
     <div class="border-all border-radius padding-10 bg-dark text-center">
-        <h5 class="font-weight-normal margin-top-20">
+        <h5 class="font-weight-normal margin-top-20 margin-bottom-20">
           <%= t('ong.contribucion_5000')%>
         </h5>
       </div>
 
     <!-- box 1 -->
-    <div class="row align-items-center col-spacing-50">
+    <div class="row align-items-center col-spacing-50 margin-top-20">
       <div class="col-12 col-md-6">
-        <img class="border-radius box-shadow-with-hover" src="../assets/images/col-2.jpg" alt="">
+        <img class="border-radius-30" src="<%= asset_url('truck.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/people'>People vector created by pch.vector - www.freepik.com</a> -->
       </div>
       <div class="col-12 col-md-6">
         <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
@@ -81,7 +88,8 @@
     <!-- box 2 -->
     <div class="row align-items-center col-spacing-50 margin-top-50 text-md-right">
       <div class="col-12 col-md-6 order-md-2">
-        <img class="border-radius box-shadow-with-hover" src="../assets/images/col-2.jpg" alt="">
+        <img class="border-radius-30" src="<%= asset_url('flyers.jpg')%>" alt="">
+       <!--  <a href='https://www.freepik.com/vectors/people'>People vector created by stories - www.freepik.com</a> -->
       </div>
       <div class="col-12 col-md-6 order-md-1">
         <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
@@ -92,7 +100,8 @@
     <!-- box 3 -->
     <div class="row align-items-center col-spacing-50 margin-top-50">
       <div class="col-12 col-md-6">
-        <img class="border-radius box-shadow-with-hover" src="../assets/images/col-2.jpg" alt="">
+        <img class="border-radius-30" src="<%= asset_url('radio.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/car'>Car vector created by macrovector - www.freepik.com</a> -->
       </div>
       <div class="col-12 col-md-6">
         <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
@@ -102,15 +111,16 @@
     </div>
 
     <div class="border-all border-radius padding-10 bg-dark text-center">
-      <h5 class="font-weight-normal margin-top-20">
+      <h5 class="font-weight-normal margin-top-20 margin-bottom-20">
         <%= t('ong.contribucion_10000')%>
       </h5>
     </div>
 
     <!-- box 4 -->
-    <div class="row align-items-center col-spacing-50">
+    <div class="row align-items-center col-spacing-50 margin-top-20">
       <div class="col-12 col-md-6">
-        <img class="border-radius box-shadow-with-hover" src="../assets/images/col-2.jpg" alt="">
+        <img class="border-radius-30" src="<%= asset_url('water.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/water'>Water vector created by stories - www.freepik.com</a> -->
       </div>
       <div class="col-12 col-md-6">
         <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
@@ -121,7 +131,8 @@
     <!-- box 5 -->
     <div class="row align-items-center col-spacing-50 margin-top-50 text-md-right">
       <div class="col-12 col-md-6 order-md-2">
-        <img class="border-radius box-shadow-with-hover" src="../assets/images/col-2.jpg" alt="">
+        <img class="border-radius-30" src="<%= asset_url('street.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/city'>City vector created by tartila - www.freepik.com</a> -->
       </div>
       <div class="col-12 col-md-6 order-md-1">
         <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
@@ -132,7 +143,7 @@
     <!-- box 6 -->
     <div class="row align-items-center col-spacing-50">
       <div class="col-12 col-md-6">
-        <img class="border-radius box-shadow-with-hover" src="../assets/images/col-2.jpg" alt="">
+        <img class="border-radius-30" src="<%= asset_url('radio.jpg')%>" alt="">
       </div>
       <div class="col-12 col-md-6">
         <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
@@ -142,10 +153,109 @@
     </div>
 
     <div class="border-all border-radius padding-10 bg-dark text-center">
-      <h5 class="font-weight-normal margin-top-20">
+      <h5 class="font-weight-normal margin-top-20 margin-bottom-20">
         <%= t('ong.que_hacer_aporte')%>
       </h5>
     </div>
+
+    <!-- box 7 -->
+    <div class="row align-items-center col-spacing-50 margin-top-20">
+      <div class="col-12 col-md-6">
+        <img class="border-radius-30" src="<%= asset_url('protection.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/premium-vector/person-with-your-personal-protection-equipment-industrial-safety-icons_5742235.htm'>Person with your personal protection equipment and industrial safety icons Premium Vector created by ipajoel - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.buy_materials')%></h4>
+        <p><%= t('ong.buy_materials_text')%></p>
+      </div>
+    </div>
+    <!-- box 8 -->
+    <div class="row align-items-center col-spacing-50 margin-top-50 text-md-right">
+      <div class="col-12 col-md-6 order-md-2">
+        <img class="border-radius-30" src="<%= asset_url('hydratation.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/water'>Water vector created by pch.vector - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6 order-md-1">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.hydration')%></h4>
+        <p><%= t('ong.hydration_text')%></p>
+      </div>
+    </div>
+    <!-- box 9 -->
+    <div class="row align-items-center col-spacing-50 margin-top-20">
+      <div class="col-12 col-md-6">
+        <img class="border-radius-30" src="<%= asset_url('trash.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/food'>Food vector created by pch.vector - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.acopio')%></h4>
+        <p><%= t('ong.acopio_text')%></p>
+      </div>
+    </div>
+    <!-- box 10 -->
+    <div class="row align-items-center col-spacing-50 margin-top-50 text-md-right">
+      <div class="col-12 col-md-6 order-md-2">
+        <img class="border-radius-30" src="<%= asset_url('trash_can.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/background'>Background vector created by brgfx - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6 order-md-1">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.donation')%></h4>
+        <p><%= t('ong.donation_text')%></p>
+      </div>
+    </div>
+
+    <div class="border-all border-radius padding-10 bg-dark text-center">
+      <h5 class="font-weight-normal margin-top-20 margin-bottom-20">
+        <%= t('ong.how_contribute')%>
+      </h5>
+    </div>
+
+    <!-- box 11 -->
+    <div class="row align-items-center col-spacing-50 margin-top-20">
+      <div class="col-12 col-md-6">
+        <img class="border-radius-30" src="<%= asset_url('one.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/school'>School vector created by Creative_hat - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.learn_us')%></h4>
+        <p><%= t('ong.learn_us_text')%></p>
+      </div>
+    </div>
+    <!-- box 12 -->
+    <div class="row align-items-center col-spacing-50 margin-top-50 text-md-right">
+      <div class="col-12 col-md-6 order-md-2">
+        <img class="border-radius-30" src="<%= asset_url('two.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/school'>School vector created by Creative_hat - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6 order-md-1">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.know_trate')%></h4>
+        <p><%= t('ong.know_trate_text')%></p>
+      </div>
+    </div>
+    <!-- box 13 -->
+    <div class="row align-items-center col-spacing-50">
+      <div class="col-12 col-md-6">
+        <img class="border-radius-30" src="<%= asset_url('three.jpg')%>" alt="">
+        <!-- <a href='https://www.freepik.com/vectors/school'>School vector created by Creative_hat - www.freepik.com</a> -->
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- <h6 class="font-family-tertiary font-small font-weight-normal uppercase"><%= t('ong.about_reverse_html')%></h6> -->
+        <h4><%= t('ong.make_your_contribution')%></h4>
+        <p><%= t('ong.make_your_contribution_text')%></p>
+      </div>
+    </div>
+
+    <div class="border-all border-radius padding-10 text-center">
+      <h5 class="font-weight-normal margin-top-20 margin-bottom-20">
+        <%= t('ong.finally_phrase_html')%>
+      </h5>
+    </div>
+
   </div><!-- end container -->
 </div>
 <!-- end section -->
