@@ -29,17 +29,19 @@
         </div>
         <p><%= @reservation.room.name %></p>
         <div class="margin-top-30">
-          <p>Quantity: <%= @reservation.quantity %></p>
+          <p>Num of People: <%= @reservation.quantity %></p>
           <p>Start Date: <%= @reservation.start_date.strftime("%d - %B - %Y") %></p>
           <p>End Date: <%= @reservation.end_date.strftime("%d - %B - %Y") %></p>
           <%- if @reservation.approved? %>
             <%= link_to "Paid", reservation_path(@reservation), class: "button button-md button-grey" %>
           <%- else %>
-            <script
-              src="https://www.mercadopago.com.pe/integrations/v1/web-payment-checkout.js"
-              data-preference-id="<%= @preference_id %>">
-            </script>
-            <%= link_to pay_buttom_text(reservation: @reservation, show_total: true, show_text: true), reservation_path(@reservation), class: "button button-md button-dark" %>
+            <div class="d-none">
+              <script
+                src="https://www.mercadopago.com.pe/integrations/v1/web-payment-checkout.js"
+                data-preference-id="<%= @preference_id %>">
+              </script>
+            </div>
+            <%= link_to pay_buttom_text(reservation: @reservation, show_total: true, show_text: true), "javascript:;", class: "button button-md button-dark js-pay-buttom" %>
             <%= link_to "Edit reservation", edit_reservation_path(@reservation), class: "button button-md button-grey" %>
           <%- end %>
 
@@ -92,3 +94,5 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag "reservations/show" %>

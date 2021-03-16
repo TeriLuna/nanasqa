@@ -30,7 +30,7 @@ class ReservationsController < ApplicationController
     if @room.present?
       if @room.is_available?(start_date: reservation_params[:start_date], end_date: reservation_params[:end_date])
         @reservation = Reservation.
-          first_or_initialize(user_id: current_user.id, room_id: @room.id)
+          find_or_initialize_by(user_id: current_user.id, room_id: @room.id, start_date: reservation_params[:start_date], end_date: reservation_params[:end_date])
 
         @reservation.attributes = reservation_params
         @reservation.total = calculate_total(@room, @reservation)
