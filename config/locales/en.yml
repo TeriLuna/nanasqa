@@ -72,7 +72,7 @@ en:
     ong: "Our ONG!"
     volunteer: "Be a volunteer!"
   features:
-    stars: "Look the at stars!"
+    stars: "Look at the stars!"
     stars_text: "You will be able to admire the wonderful sky full of bright stars in the best places of Nazca."
     tree: "Breathe fresh air"
     tree_text: "You will breathe fresh air in little paradisiacal sites."
@@ -80,6 +80,10 @@ en:
     dunes_text: "Slide in the dunes, have fun doing a different and unique sport!"
     routes: "Know our routes!"
     routes_text: "We have the best routes to know all the wonders of Nazca."
+    relax_chill: "Get relax and chill"
+    relax_chill_text: "Nanasqa is a home away from home, so come and get chill and relax in this awesome place in the middle of the desert."
+    know_new_people: "Connect with new people!"
+    know_new_people_text: "Here you will find people that come from around the world. Connect with people that even can practice a lenguage with you!"
   volunteer:
     title_volunteer: "Let's use our knowledges to make this sharing epic!"
     text_volunteer_html: "<p>We are a community where travelers share experiences and memories. We have opportunities to volunteer in multiple areas: permaculture, visual art, hostel activities, sewing, social projects. We would like to know about any unique talents you can contribute to our community. Our intention is to allow every traveler to develop their skills and to become involved in various projects. We offer breakfast and a bed. If you want to collaborate with us, please send us a message.</p>"
