@@ -296,7 +296,10 @@
 <!-- end Testimonial section -->
 
 <!-- Maps Section -->
-<div class="section">
-	<div id="map1" class="gmap gmap-xs" data-latitude="51.513569" data-longitude="-0.123443"></div>
-</div> -->
+<div class="section-xs padding-0">
+	<iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Calle%20Los%20Geranios%20nazca+(nanasqa)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/'>... maps-generator.com</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=f7e8ca9ebf48196ba77ed8ea2f91ca934b8e70a7'></script>
+</div>
 
+<%- content_for :javascript do %>
+	<%= javascript_include_tag "home/home.js" %>
+<%- end  %>
