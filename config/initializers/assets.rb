@@ -57,6 +57,7 @@ Rails.application.config.assets.precompile +=
       functions.js
       reservations/form.js
       reservations/show.js
+      home/home.js
       moment.js
       daterangepicker.js
     )
