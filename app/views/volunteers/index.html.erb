@@ -9,23 +9,19 @@
         <h3 class="font-weight-light">
           <%= t('volunteer.title_volunteer')%>
         </h3>
-        <%= t('volunteer.text_volunteer_html')%>
-        <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to be a volunteer in Nanasqa Hostel! / Hola! Me gustaría ser voluntari@ en Nanasqa Hostel" target="_blank">
-          <span>
-            <%= t('volunteer.get_in_touch')%>
-          </span>
-          <i class="ti-arrow-right"></i>
-        </a>
-        <%= link_to(new_volunteer_path, class:"button button-lg button-rounded button-reveal-right-dark margin-top-30") do %>
-          <%= t('volunteer.froms')%>
-          <i class="ti-arrow-right"></i>
-        <%- end %>
-       <!--  <a class="button button-lg button-rounded button-reveal-right-dark margin-top-30" >
-          <span>
-            <%= t('volunteer.form')%>
-          </span>
-          <i class="ti-arrow-right"></i>
-        </a> -->
+        <div class="possition-center">
+          <%= t('volunteer.text_volunteer_html')%>
+          <a class=" button button-lg button-outline-dark-2 button-rounded button-reveal-right-dark font-weight-bold margin-top-30" href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to be a volunteer in Nanasqa Hostel! / Hola! Me gustaría ser voluntari@ en Nanasqa Hostel" target="_blank">
+            <span>
+              <%= t('volunteer.get_in_touch')%>
+            </span>
+            <i class="ti-arrow-right"></i>
+          </a>
+          <%= link_to(new_volunteer_path, class:"button button-lg button-fill-left-outline button-rounded margin-top-30 font-weight-semi-bold") do %>
+            <%= t('volunteer.forms')%>
+            <i class="ti-arrow-right"></i>
+          <%- end %>
+        </div>
 
       </div>
       <div class="col-12 col-lg-7">
