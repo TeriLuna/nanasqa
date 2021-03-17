@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|es/ do
     resource :languages, only: [:update]
-    resources :volunteers, only: [:index]
+    resources :volunteers, only: [:index, :new]
     resources :ongs, only: [:index]
     resources :reservations do
       get '/success' => "reservations#success"

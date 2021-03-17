@@ -36,9 +36,7 @@
           </li>
           <%- else %>
           <li class="nav-item">
-            <%= link_to(new_user_session_path, class: "nav-link no-underline text-dark") do %>
-              <i class="fa fa-user"></i>
-            <%- end %>
+            <%= link_to(t('login.text'), new_user_session_path, class: "nav-link no-underline text-dark font-weight-bold ") %>
           </li>
         <%- end %>
         <li class="nav-item">
