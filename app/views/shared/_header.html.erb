@@ -5,36 +5,35 @@
     <!-- Logo -->
     <div class="header-logo">
       <h3>
-        <%=link_to(image_tag(asset_path('logo_text.png')), root_path, class:"no-underline") %>
+        <%=link_to(image_tag(asset_path('logo_text_black2.png')), root_path, class:"no-underline") %>
       </h3>
-
-      <!--
-      <img class="logo-dark" src="../assets/images/your-logo-dark.png" alt="">
-      <img class="logo-light" src="../assets/images/your-logo-light.png" alt="">
-      -->
     </div>
+
     <!-- Menu -->
     <div class="header-menu">
-      <ul class="nav list-inline">
+      <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link text-dark font-weight-bold no-underline" href="#">Nanasqa</a>
+          <a class="nav-link d-toggle no-underline  font-weight-bold" href="#">Nanasqa</a>
           <ul class="nav-dropdown">
             <li class="nav-dropdown-item">
-              <%= link_to(t('reservation.book_now'), reservations_path, class: 'nav-dropdown-link')%>
-              <li class="nav-dropdown-item">
-                <%= link_to(t('reserve.volunteer'), volunteers_path, class: 'nav-dropdown-link')%>
-                <ul class="nav-subdropdown">
-                  <li class="nav-subdropdown-item">
-                    <%= link_to(t('volunteer.fill_forms'), new_volunteer_path, class: 'nav-subdropdown-link')%>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-dropdown-item">
-                <%= link_to(t('reservation.ong'), ongs_path, class: 'nav-dropdown-link')%>
-              </li>
+              <%= link_to(t('reserve.volunteer'), volunteers_path, class: 'nav-dropdown-link sd-toggle no-underline')%>
+              <ul class="nav-subdropdown">
+                <li class="nav-subdropdown-item">
+                <%= link_to(t('volunteer.fill_forms'), new_volunteer_path, class: 'nav-subdropdown-link no-underline')%>
+                </li>
+              </ul>
+              <a class="nav-subdropdown-toggle active" href="#"></a>
+            </li>
+            <li class="nav-dropdown-item">
+              <%= link_to(t('reservation.book_now'), reservations_path, class: 'nav-dropdown-link no-underline')%>
+            </li>
+            <li class="nav-dropdown-item">
+              <%= link_to(t('reservation.ong'), ongs_path, class: 'nav-dropdown-link no-underline')%>
             </li>
           </ul>
+          <a class="nav-dropdown-toggle active" href="#"></a>
         </li>
+
         <%- if user_signed_in? %>
           <li class="nav-item">
             <a class="nav-link text-dark no-underline" href="#"><i class="fa fa-user"></i></a>
@@ -45,41 +44,32 @@
           </li>
           <%- else %>
           <li class="nav-item">
-            <%= link_to(t('login.text'), new_user_session_path, class: "nav-link no-underline text-dark font-weight-bold ") %>
+            <%= link_to(t('login.text'), new_user_session_path, class: "nav-link no-underline font-weight-bold ") %>
           </li>
         <%- end %>
         <li class="nav-item">
-          <a class="nav-link no-underline text-dark" target="_blanck" href="https://www.facebook.com/nanasqa/">
+          <a class="nav-link no-underline" target="_blanck" href="https://www.facebook.com/nanasqa/">
             <i class="fab fa-facebook-f"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link no-underline text-dark" target="_blanck" href="https://twitter.com/nanasqa">
+          <a class="nav-link no-underline" target="_blanck" href="https://twitter.com/nanasqa">
             <i class="fab fa-twitter"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link no-underline text-dark" target="_blanck" href="https://www.instagram.com/nanasqa/">
+          <a class="nav-link no-underline" target="_blanck" href="https://www.instagram.com/nanasqa/">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </li>
         <li class="nav-item ">
-          <%= link_to"EN", url_for( locale: 'en' ), class: "nav-link no-underline font-weight-bold text-dark " %>
+          <%= link_to"EN", url_for( locale: 'en' ), class: "nav-link no-underline font-weight-bold " %>
         </li>
         <li class="nav-item">
-          <%= link_to "ES", url_for( locale: 'es' ), class: "nav-link no-underline font-weight-bold text-dark" %>
+          <%= link_to "ES", url_for( locale: 'es' ), class: "nav-link no-underline font-weight-bold" %>
         </li>
       </ul>
     </div>
-    <!-- Menu Extra -->
-    <!-- <div class="header-menu-extra">
-      <ul class="list-inline">
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-      </ul>
-    </div> -->
-    <!-- Menu Toggle -->
     <button class="header-toggle">
       <span></span>
     </button>

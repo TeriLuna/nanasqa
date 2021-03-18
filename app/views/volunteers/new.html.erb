@@ -6,22 +6,23 @@
       <div class="col-12">
         <div id="outside">
           <form id="survey-form" action="/my-handling-form-page" method="post">
-            <h1 class="display-4 text-center margin-bottom-50" id="title">Volunteer Application</h1>
-            <p class=" margin-bottom-30 text-center" id="description"> Do you wanna be part of these adventure? Please fill the form below to get in touch!</p>
+            <h1 class="display-4 text-center margin-bottom-50" id="title"><%= t('application_form.title')%></h1>
+            <p class=" margin-bottom-30 text-center" id="description"><%= t('application_form.text')%></p>
             <!-- ------------------Personal Details---------------------------- -->
             <fieldset>
               <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
-              <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold">Personal Details
+              <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold">
+                <%= t('application_form.personal_details')%>
               </h2>
               <!-- formally describes the purpose of the fieldset it is included inside. -->
               <div class="row">
                 <div class="col-12 col-lg-5 margin-top-20">
-                  <label id="name-label" for="name">Name:</label>
-                  <input type="text" required id="name" name="user_name" placeholder="Enter name here">
+                  <label id="name-label" for="name"><%= t('application_form.name')%></label>
+                  <input type="text" required id="name" name="user_name" placeholder="<%= t('application_form.enter_name')%>">
                 </div>
                 <div class="col-12 col-lg-7 margin-top-20">
-                  <label id="name-label" for="name">Last name:</label>
-                  <input type="text" required id="name" name="user_name" placeholder="Enter name here">
+                  <label id="name-label" for="name"><%= t('application_form.last_name')%></label>
+                  <input type="text" required id="name" name="user_name" placeholder="<%= t('application_form.enter_last_name')%>">
                 </div>
               </div>
               <!-- <div>
@@ -29,14 +30,15 @@
                 <input type="Address" id="address" name="Address" placeholder="Enter address here">
               </div> -->
               <div>
-                <label class="margin-top-20" id="email-label" for="Email">Email:</label>
-                <input type="email" required id="email" name="user_email" placeholder="Enter email here">
+                <label class="margin-top-20" id="email-label" for="Email"><%= t('application_form.email')%></label>
+                <input type="email" required id="email" name="user_email" placeholder="<%= t('application_form.enter_email')%>">
               </div>
               <div class="row">
                 <div  class="col-12 col-lg-3">
                   <!-- country codes (ISO 3166) and Dial codes. -->
                   <select class="margin-top-60" name="countryCode" id="">
-                    <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
+                    <option data-countryCode="PE" value="51" Selected>Peru (+51)</option>
+                    <option data-countryCode="CO" value="57">Colombia (+57)</option>
                     <option data-countryCode="US" value="1">USA (+1)</option>
                     <optgroup label="Other countries">
                       <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -256,63 +258,55 @@
                   </select>
                 </div>
                 <div  class="col-12 col-lg-5">
-                  <label class="margin-top-20" id="number-label" for="phone">Whatsapp / Phone Number:</label>
-                  <input type="number" id="number" name="user_name" placeholder="Enter digit number" min="1" max="11">
+                  <label class="margin-top-20" id="number-label" for="phone"><%= t('application_form.phone_number')%></label>
+                  <input type="number" id="number" name="user_name" placeholder="<%= t('application_form.enter_number')%>" min="1" max="11">
                 </div>
                 <!-- ------------------Radio Buttons-------------------------------- -->
                 <div class="col-12 col-lg-2">
-                  <label class="margin-top-20" for="Gender">Gender</label>
+                  <label class="margin-top-20" for="Gender"><%= t('application_form.gender')%></label>
                   <p>
-                    <input type="radio" name="gender" value="male" checked> Male<br>
-                    <input type="radio" name="gender" value="female"> Female<br>
-                    <input type="radio" name="gender" value="other"> I prefer not to say
+                    <input type="radio" name="gender" value="female"> <%= t('application_form.female')%><br>
+                    <input type="radio" name="gender" value="male"> <%= t('application_form.male')%><br>
+                    <input type="radio" name="gender" value="other"> <%= t('application_form.not_say')%>
                   </p>
                 </div>
                 <div class="col-12 col-lg-2">
-                  <label class="margin-top-20" for="Highlights">Highlights</label>
+                  <label class="margin-top-20" for="kind"><%= t('application_form.kind_volunteer')%></label>
                   <p>
-                    <input type="radio" name="Highlights" value="couple" checked> Couple or pairs<br>
-                    <input type="radio" name="Highlights" value="solo"> Solo application<br>
+                    <input type="radio" name="kind" value="solo"> <%= t('application_form.solo')%><br>
+                    <input type="radio" name="kind" value="couple"> <%= t('application_form.couple')%><br>
                   </p>
                 </div>
                 <div class="col-12">
-                  <label for="msg">Which are your skills as a volunteer?</label><br>
-                  <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+                  <label for="msg"><%= t('application_form.which_skills')%></label><br>
+                  <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="<%= t('application_form.enter_text')%>"></textarea>
                 </div>
               </div>
-
-
-
-
-
 
               <!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
-              <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold">Personal Details Of Your Partner
+              <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold  margin-top-30"><%= t('application_form.personal_details_partner')%>
               </h2>
               <!-- formally describes the purpose of the fieldset it is included inside. -->
               <div class="row">
                 <div class="col-12 col-lg-5 margin-top-20">
-                  <label id="name-label" for="name">Name:</label>
-                  <input type="text" required id="name" name="user_name" placeholder="Enter name here">
+                  <label id="name-label" for="name"><%= t('application_form.name')%></label>
+                  <input type="text" required id="name" name="user_name" placeholder="<%= t('application_form.enter_name')%>">
                 </div>
                 <div class="col-12 col-lg-7 margin-top-20">
-                  <label id="name-label" for="name">Last name:</label>
-                  <input type="text" required id="name" name="user_name" placeholder="Enter name here">
+                  <label id="name-label" for="name"><%= t('application_form.last_name')%></label>
+                  <input type="text" required id="name" name="user_name" placeholder="<%= t('application_form.enter_last_name')%>">
                 </div>
               </div>
-              <!-- <div>
-                <label for="address-label">Address:</label>
-                <input type="Address" id="address" name="Address" placeholder="Enter address here">
-              </div> -->
               <div>
-                <label class="margin-top-20" id="email-label" for="Email">Email:</label>
-                <input type="email" required id="email" name="user_email" placeholder="Enter email here">
+                <label class="margin-top-20" id="email-label" for="Email"><%= t('application_form.email')%></label>
+                <input type="email" required id="email" name="user_email" placeholder="<%= t('application_form.enter_email')%>">
               </div>
               <div class="row">
                 <div  class="col-12 col-lg-3">
                   <!-- country codes (ISO 3166) and Dial codes. -->
                   <select class="margin-top-60" name="countryCode" id="">
-                    <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
+                    <option data-countryCode="PE" value="51" Selected>Peru (+51)</option>
+                    <option data-countryCode="CO" value="57">Colombia (+57)</option>
                     <option data-countryCode="US" value="1">USA (+1)</option>
                     <optgroup label="Other countries">
                       <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -532,39 +526,39 @@
                   </select>
                 </div>
                 <div  class="col-12 col-lg-5">
-                  <label class="margin-top-20" id="number-label" for="phone">Whatsapp / Phone Number:</label>
-                  <input type="number" id="number" name="user_name" placeholder="Enter digit number" min="1" max="11">
+                  <label class="margin-top-20" id="number-label" for="phone"><%= t('application_form.phone_number')%></label>
+                  <input type="number" id="number" name="user_name" placeholder="<%= t('application_form.enter_number')%>" min="1" max="11">
                 </div>
                 <!-- ------------------Radio Buttons-------------------------------- -->
                 <div class="col-12 col-lg-2">
-                  <label class="margin-top-20" for="Gender">Gender</label>
+                  <label class="margin-top-20" for="Gender"><%= t('application_form.gender')%></label>
                   <p>
-                    <input type="radio" name="gender" value="male" checked> Male<br>
-                    <input type="radio" name="gender" value="female"> Female<br>
-                    <input type="radio" name="gender" value="other"> I prefer not to say
+                    <input type="radio" name="gender" value="female"> <%= t('application_form.female')%><br>
+                    <input type="radio" name="gender" value="male"> <%= t('application_form.male')%><br>
+                    <input type="radio" name="gender" value="other"> <%= t('application_form.not_say')%>
                   </p>
                 </div>
                 <div class="col-12">
-                  <label for="msg">Which are your skills as a volunteer?</label><br>
-                  <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+                  <label for="msg"><%= t('application_form.which_skills')%></label><br>
+                  <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="<%= t('application_form.enter_text')%>"></textarea>
                 </div>
               </div>
 
               <div class="col-12 margin-top-30">
-                <h2  class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold"> When do you plan to travel?</h2>
+                <h2  class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold"> <%= t('application_form.when_travel')%></h2>
               </div>
               <div class="row">
                 <div class="col-12 col-lg-6">
-                  <label for="date-label">Arrive on:</label>
+                  <label for="date-label"><%= t('application_form.arrive_on')%></label>
                   <input type="date" name="bday">
                 </div>
 
                 <div class="col-12 col-lg-6">
-                  <label for="date-label">Depart on:</label>
+                  <label for="date-label"><%= t('application_form.depart_on')%></label>
                   <input type="date" name="bday">
                 </div>
                 <div class="col-12">
-                  <h6>*Stay at least 2 weeks</h6>
+                  <h6><%= t('application_form.stay_at_least')%></h6>
                   <hr class="solid">
                 </div>
               </div>
@@ -572,32 +566,32 @@
 
             <!-- ------------------Checkboxes-------------------------------- -->
             <fieldset>
-              <label for="Gender">What skills do you want to exchange?</label>
+              <label for="Gender"><%= t('application_form.skill_exchange')%></label>
               <div class="row margin-bottom-20 ">
                 <p class="col-12 col-lg-3">
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                </p>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.administration')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.animal_care')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.arts')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.bartending')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.cleaning')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.content_writter')%><br>
+
                 <p class="col-12 col-lg-3">
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                </p>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.cooking')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.farming')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.gardering')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.handyman')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.housekeeping')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.kitchen_hand')%><br>
+
                 <p class="col-12 col-lg-3">
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                  <input type="checkbox" name="tattoo" value="tattoo"> check box example<br>
-                </p>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.night_shigt')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.photografy')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.reception')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.web_dev')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.social_media')%><br>
+                  <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.video_mkt')%><br>
+
               </div>
             </fieldset>
 
@@ -626,20 +620,20 @@
             <!-- --------------------Text Areas------------------------------ -->
 
             <fieldset>
-              <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold">Apply to be a Volunteer</h2 >
+              <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold"><%= t('application_form.apply')%></h2 >
               <div>
                 <label for="msg"></label>
-                <p> What is the purpose of your trip?</p>
-                <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+                <p><%= t('application_form.purpose_trip')%></p>
+                <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="<%= t('application_form.enter_text')%>"></textarea>
               </div>
               <div>
                 <label for="msg"></label>
-                <p>How can you help us keeping our place incredible?</p>
-                <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+                <p><%= t('application_form.help_keeping_incredible')%></p>
+                <textarea id="msg" name="user_message" rows="4" cols="50" placeholder="<%= t('application_form.enter_text')%>"></textarea>
               </div>
               <div>
-                <label for="msg">After checking all the information about this position, do you still have any questions?</label><br>
-                <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+                <label for="msg"><%= t('application_form.questions')%></label><br>
+                <textarea id="msg2" name="user_message" rows="4" cols="50" placeholder="<%= t('application_form.enter_text')%>"></textarea>
               </div>
               <!-- <p>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here:
                 <button>Attach Files</button>
@@ -647,7 +641,8 @@
             </fieldset>
 
             <div id="submitbutton">
-              <button class="button button-lg button-fill-left-outline  button-rounded margin-top-30 font-weight-semi-bold" type="submit" id="submit">Send your application
+              <button class="button button-lg button-fill-left-outline  button-rounded margin-top-30 font-weight-semi-bold" type="submit" id="submit">
+                <%= t('application_form.send_application')%>
                 <i class="ti-arrow-right"></i>
               </button>
             </div>
@@ -657,6 +652,8 @@
     </div>
   </div>
 </div>
-
+<div class="scrolltotop scrolltotop-show">
+  <a class="button-circle button-circle-sm button-circle-dark" href="#"><i class="ti-arrow-up"></i></a>
+</div>
 
 <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation -->
