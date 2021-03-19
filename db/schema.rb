@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_10_180445) do
+ActiveRecord::Schema.define(version: 2021_03_19_141440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,7 +80,8 @@ ActiveRecord::Schema.define(version: 2021_03_10_180445) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
-    t.integer "total", default: 0
+    t.decimal "total", default: "0.0"
+    t.jsonb "additional_info", default: {}
     t.integer "status", default: 0
   end
 
@@ -105,6 +106,24 @@ ActiveRecord::Schema.define(version: 2021_03_10_180445) do
     t.integer "room_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "volunteers", force: :cascade do |t|
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "phone_number", default: "", null: false
+    t.integer "gender"
+    t.text "skills", default: "", null: false
+    t.jsonb "additional_info", default: {}
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.text "trip_purpose", default: "", null: false
+    t.text "how_can_you_help", default: "", null: false
+    t.text "questions", default: "", null: false
+    t.string "country_code", default: ""
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

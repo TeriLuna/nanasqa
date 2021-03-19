@@ -85,6 +85,8 @@ en:
     know_new_people: "Connect with new people!"
     know_new_people_text: "Here you will find people that come from around the world. Connect with people that even can practice a lenguage with you!"
   volunteer:
+    application_sent_successfuly: "Application sent successfuly, soon our staff will contact you :)"
+    application_sent_error: "Application not able to send, Please try again"
     title_volunteer: "Let's use our knowledges to make this sharing epic!"
     text_volunteer_html: "<p>We are a community where travelers share experiences and memories. We have opportunities to volunteer in multiple areas: permaculture, visual art, hostel activities, sewing, social projects. We would like to know about any unique talents you can contribute to our community. Our intention is to allow every traveler to develop their skills and to become involved in various projects. We offer breakfast and a bed. If you want to collaborate with us, please send us a message.</p>"
     bartending: "Bartending"

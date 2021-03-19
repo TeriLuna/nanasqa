@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-12 margin-top-30">
+    <h2  class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold"> <%= t('application_form.when_travel')%></h2>
+  </div>
+  <div class="col-12 col-lg-6">
+    <label for="start_date"><%= t('application_form.arrive_on')%></label>
+    <%= f.date_field :start_date, id: "start_date"%>
+  </div>
+
+  <div class="col-12 col-lg-6">
+    <label for="end_date"><%= t('application_form.depart_on')%></label>
+    <%= f.date_field :end_date, id: "end_date"%>
+  </div>
+  <div class="col-12">
+    <h6><%= t('application_form.stay_at_least')%></h6>
+    <hr class="solid">
+  </div>
+</div>
+<!-- <fieldset>
+  <label for="Gender"><%= t('application_form.skill_exchange')%></label>
+  <div class="row margin-bottom-20 ">
+    <p class="col-12 col-lg-3">
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.administration')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.animal_care')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.arts')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.bartending')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.cleaning')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.content_writter')%><br>
+
+    <p class="col-12 col-lg-3">
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.cooking')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.farming')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.gardering')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.handyman')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.housekeeping')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.kitchen_hand')%><br>
+
+    <p class="col-12 col-lg-3">
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.night_shigt')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.photografy')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.reception')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.web_dev')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.social_media')%><br>
+      <input type="checkbox" name="tattoo" value="tattoo"> <%= t('application_form.video_mkt')%><br>
+
+  </div>
+</fieldset>
+ -->

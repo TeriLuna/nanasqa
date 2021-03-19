@@ -1,0 +1,20 @@
+<fieldset>
+  <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold"><%= t('application_form.apply')%></h2 >
+  <div>
+    <label for="trip_purpose"></label>
+    <p><%= t('application_form.purpose_trip')%></p>
+    <%= f.text_area :trip_purpose, required: true, placeholder: t('application_form.enter_text'), id: "trip_purpose" %>
+  </div>
+  <div>
+    <label for="how_can_you_help"></label>
+    <p><%= t('application_form.help_keeping_incredible')%></p>
+    <%= f.text_area :how_can_you_help, required: true, placeholder: t('application_form.enter_text'), id: "how_can_you_help" %>
+  </div>
+  <div>
+    <label for="questions"><%= t('application_form.questions')%></label><br>
+    <%= f.text_area :questions, required: true, placeholder: t('application_form.enter_text'), id: "questions" %>
+  </div>
+  <!-- <p>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here:
+    <button>Attach Files</button>
+  </p> -->
+</fieldset>

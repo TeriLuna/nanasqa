@@ -1,0 +1,49 @@
+<div id= 'dvCouple' style="display: none" >
+<!-- groups of widgets that share the same purpose, for styling and semantic purposes -->
+  <h2 class="bg-black-02 padding-20 border-radius-10 text-center font-weight-semi-bold  margin-top-30"><%= t('application_form.personal_details_partner')%>
+  </h2>
+  <!-- formally describes the purpose of the fieldset it is included inside. -->
+  <div class="row">
+    <div class="col-12 col-lg-5 margin-top-20">
+      <label id="first_name_partner" for="name"><%= t('application_form.name')%></label>
+      <%= text_field_tag "additional_info[partner][first_name]", nil, placeholder: t('application_form.enter_name'), id: "first_name_partner" %>
+    </div>
+    <div class="col-12 col-lg-7 margin-top-20">
+      <label id="last_name_partner" for="name"><%= t('application_form.last_name')%></label>
+      <%= text_field_tag "additional_info[partner][last_name]", nil, placeholder: t('application_form.enter_name'), id: "last_name_partner" %>
+    </div>
+  </div>
+  <div>
+    <label class="margin-top-20" id="email_partner" for="email"><%= t('application_form.email')%></label>
+    <%= text_field_tag "additional_info[partner][email]", nil, placeholder: t('application_form.enter_email'), id: "email_partner" %>
+  </div>
+  <div class="row">
+    <div  class="col-12 col-lg-3">
+      <!-- country codes (ISO 3166) and Dial codes. -->
+      <%= country_select "additional_info[partner][country_code]", nil, { priority_countries: ["PE"], format: :with_alpha2}, { class: "margin-top-60 width-270" } %>
+    </div>
+    <div  class="col-12 col-lg-5">
+      <label class="margin-top-20" id="number-label" for="phone_partner"><%= t('application_form.phone_number')%></label>
+      <%= number_field_tag "additional_info[partner][phone_number]", nil, placeholder: t('application_form.enter_number'), id: "phone_partner", min: "1" %>
+    </div>
+    <!-- ------------------Radio Buttons-------------------------------- -->
+    <div class="col-12 col-lg-2">
+      <label class="margin-top-20" for="Gender"><%= t('application_form.gender')%></label>
+      <p>
+        <%= radio_button_tag "additional_info[partner][gender]", t('application_form.female').downcase, true, id: "gender-partner-female" %>
+        <label class="" for="gender-partner-female"><%= t('application_form.female')%></label>
+        <br>
+        <%= radio_button_tag "additional_info[partner][gender]", t('application_form.male').downcase, false, id: "gender-partner-male" %>
+        <label class="" for="gender-partner-male"><%= t('application_form.male')%></label>
+        <br>
+        <%= radio_button_tag "additional_info[partner][gender]", "other", false, id: "gender-partner-other" %>
+        <label class="" for="gender-partner-other"><%= t('application_form.not_say')%></label>
+        <br>
+      </p>
+    </div>
+    <div class="col-12">
+      <label for="partner_skills"><%= t('application_form.which_skills')%></label><br>
+      <%= text_area_tag "additional_info[partner][skills]", nil, placeholder: t('application_form.enter_text'), id: "partner_skills" %>
+    </div>
+  </div>
+</div>
