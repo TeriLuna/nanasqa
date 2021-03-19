@@ -60,4 +60,5 @@ Rails.application.config.assets.precompile +=
       home/home.js
       moment.js
       daterangepicker.js
+      volunteers/new.js
     )

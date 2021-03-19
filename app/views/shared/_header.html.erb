@@ -3,17 +3,26 @@
 <div class="<%= layout_classes %>">
   <div class="container">
     <!-- Logo -->
-    <div class="header-logo">
+
+    <div class="">
+      <div class="header-logo">
+        <h3>
+          <%=link_to(image_tag(asset_path('logo_text_black3.png')), root_path, class:"no-underline") %>
+        </h3>
+      </div>
+    </div>
+
+    <!-- <div class="header-logo">
       <h3>
         <%=link_to(image_tag(asset_path('logo_text_black2.png')), root_path, class:"no-underline") %>
       </h3>
-    </div>
+    </div> -->
 
     <!-- Menu -->
     <div class="header-menu">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link d-toggle no-underline  font-weight-bold" href="#">Nanasqa</a>
+          <a class="nav-link d-toggle no-underline font-weight-bold">Nanasqa</a>
           <ul class="nav-dropdown">
             <li class="nav-dropdown-item">
               <%= link_to(t('reserve.volunteer'), volunteers_path, class: 'nav-dropdown-link sd-toggle no-underline')%>

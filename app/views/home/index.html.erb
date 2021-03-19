@@ -7,22 +7,24 @@
 		      <div class="position-middle">
 		        <div class="row">
 		          <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-		          	<div class="">
-		              <h1 class="font-weight-light line-height-160 margin-0">
-		                <%= t('index.index_text_html')%>
-		              </h1>
-		              <%= link_to ongs_path, class: "button button-lg button-radius button-white margin-top-30" do %>
-		              	<i class="ti-heart"></i>
-		              	<%= t('reservation.ong')%>
-		              <%- end %>
-  	              <%= link_to reservations_path, class: "button button-lg button-radius button-dark margin-top-30 margin-right-" do %>
-                  	<i class="ti-bookmark-alt"></i>
-                  	<%= t('reservation.book_now')%>
-                  <%- end %>
-		              <%= link_to volunteers_path, class: "button button-lg button-radius button-white margin-top-30" do %>
-		              	<i class="ti-face-smile"></i>
-		              	<%= t('reservation.volunteer')%>
-		              <%- end %>
+		          	<h1 class="font-weight-light line-height-160 margin-0">
+		          	  <%= t('index.index_text_html')%>
+		          	</h1>
+		          	<div class="box-hide">
+		              <div>
+	  	              <%= link_to reservations_path, class: "button button-lg button-radius button-dark margin-top-30 margin-right-" do %>
+	                  	<i class="ti-bookmark-alt"></i>
+	                  	<%= t('reservation.book_now')%>
+	                  <%- end %>
+			              <%= link_to ongs_path, class: "button button-lg button-radius button-dark margin-top-30" do %>
+			              	<i class="ti-heart"></i>
+			              	<%= t('reservation.ong')%>
+			              <%- end %>
+			              <%= link_to volunteers_path, class: "button button-lg button-radius button-dark margin-top-30" do %>
+			              	<i class="ti-face-smile"></i>
+			              	<%= t('reservation.volunteer')%>
+			              <%- end %>
+		              </div>
 		          	</div>
 		          </div>
 		        </div>
