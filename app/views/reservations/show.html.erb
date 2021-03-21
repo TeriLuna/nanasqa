@@ -41,7 +41,7 @@
                 data-preference-id="<%= @preference_id %>">
               </script>
             </div>
-            <%= link_to pay_buttom_text(reservation: @reservation, show_total: true, show_text: true, room: reservation.room), "javascript:;", class: "button button-md button-dark js-pay-buttom" %>
+            <%= link_to pay_buttom_text(reservation: @reservation, show_total: true, show_text: true, room: @reservation.room), "javascript:;", class: "button button-md button-dark js-pay-buttom" %>
             <%= link_to "Edit reservation", edit_reservation_path(@reservation), class: "button button-md button-grey" %>
           <%- end %>
 

@@ -52,29 +52,52 @@ $( document ).ready(function() {
       }
     }
 
-    $("#js-datepicker-id").dateRangePicker(
-      {
+
+    var formView = {
+      editView: {
+        setCheckInCheckoutDate: function(){
+          var $startDate = $(".js-start-date");
+          var $endDate = $(".js-end-date");
+          $startDate = moment($startDate.val()).add(1, "days").format("DD/MM/Y")
+          $endDate = moment($endDate.val()).add(1, "days").format("DD/MM/Y")
+          var defaultDate = $startDate + " to " + $endDate;
+          $("#js-datepicker-id").val(defaultDate);
+          $("#js-datepicker-id").trigger("change");
+        },
+        setDatePicker: function(config){
+          $("#js-datepicker-id").dateRangePicker(config).bind('datepicker-close', updateInputDates);
+        }
+      },
+      newView: {
+        setDatePicker: function(config){
+          $("#js-datepicker-id").dateRangePicker(config).bind('datepicker-close', updateInputDates);
+        }
+      }
+    }
+
+    if($(".js-container-action").data("rails-action") == "edit"){
+
+      var $startDate = $(".js-start-date");
+      $startDate = moment($startDate.val()).add(1, "days").format("DD/MM/Y")
+
+      formView.editView.setDatePicker({
+        autoClose: true,
+        startDate: $startDate,
         format: "DD/MM/Y",
         dateFormat: "DD/MM/Y",
         beforeShowDay: unavailable
-      }
-    ).bind('datepicker-close', updateInputDates);
+      });
+      formView.editView.setCheckInCheckoutDate();
 
+    }else if($(".js-container-action").data("rails-action") == "new"){
 
-    var editView = {
-      setCheckInCheckoutDate: function(){
-        var $startDate = $(".js-start-date");
-        var $endDate = $(".js-end-date");
-        $startDate = moment($startDate.val()).add(1, "days").format("DD/MM/Y")
-        $endDate = moment($endDate.val()).add(1, "days").format("DD/MM/Y")
-        var defaultDate = $startDate + " to " + $endDate;
-        $("#js-datepicker-id").val(defaultDate);
-        $("#js-datepicker-id").trigger("change");
-      }
-    };
-
-    if($(".js-container-action").data("rails-action") == "edit"){
-      editView.setCheckInCheckoutDate();
+      formView.newView.setDatePicker({
+        autoClose: true,
+        startDate: moment(),
+        format: "DD/MM/Y",
+        dateFormat: "DD/MM/Y",
+        beforeShowDay: unavailable
+      });
     }
 
   })()
