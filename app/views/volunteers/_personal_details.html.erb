@@ -23,7 +23,7 @@
     <%= f.number_field :phone_number, required: true, placeholder: t('application_form.enter_number'), id: "phone_number", min: "1" %>
   </div>
   <!-- ------------------Radio Buttons-------------------------------- -->
-  <div class="col-12 col-lg-2">
+  <!-- <div class="col-12 col-lg-2">
     <label class="margin-top-20" for="Gender"><%= t('application_form.gender')%></label>
     <p>
       <%= f.radio_button :gender, t('application_form.female').downcase, checked: true, required: true, id: "gender-female" %>
@@ -36,7 +36,7 @@
       <label class="" for="gender-other"><%= t('application_form.not_say')%></label>
       <br>
     </p>
-  </div>
+  </div> -->
   <div class="col-12 col-lg-2">
     <label class="margin-top-20" for="kind"><%= t('application_form.kind_volunteer')%></label>
     <p>
