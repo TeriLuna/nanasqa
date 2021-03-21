@@ -76,9 +76,9 @@
             </div>
 
             <%= f.submit(
-                  pay_buttom_text(reservation: reservation, show_total: true),
+                  pay_buttom_text(reservation: reservation, show_total: true, room: room),
                   class: "button button-md button-dark js-pay-buttom",
-                  data: { text: pay_buttom_text(reservation: reservation, show_total: false) }
+                  data: { text: pay_buttom_text(reservation: reservation, show_total: false, room: room) }
             )%>
           <%- end %>
         </div>

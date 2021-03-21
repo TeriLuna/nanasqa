@@ -42,11 +42,11 @@
                 <!-- <span>monthly</span> -->
               </div>
               <div class="price-features">
-                <h4 class="font-weight-normal"><%= pay_buttom_text(reservation: reservation, show_total: true, show_text: false) %></h4>
+                <h4 class="font-weight-normal"><%= pay_buttom_text(reservation: reservation, show_total: true, show_text: false, room: reservation.room) %></h4>
                 <%- if reservation.approved? %>
                   <%= link_to "Paid | See reservation", reservation_path(reservation), class: "button button-md button-grey button-rounded" %>
                 <%- else %>
-                  <%= link_to pay_buttom_text(reservation: reservation, show_total: true, show_text: false), reservation_path(reservation), class: "button button-md button-dark button-rounded" %>
+                  <%= link_to pay_buttom_text(reservation: reservation, show_total: true, show_text: false, room: reservation.room), reservation_path(reservation), class: "button button-md button-dark button-rounded" %>
                 <%- end %>
               </div>
             </div>
