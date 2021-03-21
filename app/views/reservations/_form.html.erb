@@ -37,7 +37,9 @@
         </div>
 
         <div class="col-12 col-lg-5">
-          <p><%= @room.description %></p>
+          <div class="product-info-box margin-bottom-20">
+            <p><%= room.description %></p>
+          </div>
           <%= form_for(reservation, html: { class: "product-quantity" }) do |f| %>
 
             <%= f.label t('reservations.number_of_people') %>
