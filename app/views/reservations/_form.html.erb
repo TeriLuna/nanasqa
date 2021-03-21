@@ -12,7 +12,7 @@
       <h1 class="font-weight-bold text-center"><%= t('reservations.title')%></h1>
     </div>
     <!-- IMG Section -->
-    <div class="section">
+    <div class="section-xs">
       <div class="row col-spacing-30 align-items-start items-center">
         <div class="col-12 col-lg-6">
           <div class="row gallery-wrapper col-spacing-10">
@@ -37,6 +37,7 @@
         </div>
 
         <div class="col-12 col-lg-5">
+          <p><%= @room.description %></p>
           <%= form_for(reservation, html: { class: "product-quantity" }) do |f| %>
 
             <%= f.label t('reservations.number_of_people') %>
@@ -85,3 +86,4 @@
 </div>
 
 <%= javascript_include_tag "reservations/form" %>
+<%= javascript_include_tag "reservations/show" %>
