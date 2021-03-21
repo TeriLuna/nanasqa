@@ -48,6 +48,37 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def update
+    @reservation = Reservation.find_by(id: params[:id], user_id: current_user.id)
+    if @reservation.present?
+      @room = @reservation.room
+      reserved = Reservation.
+        where(
+          room_id: @room.id,
+          start_date: reservation_params[:start_date],
+          end_date: reservation_params[:end_date]
+        ).
+        where.not(
+          user_id: current_user.id
+        )
+
+      if reserved.any?
+        @reservation = Reservation.new(reservation_params)
+        flash.now[:alert] = "Room not available in these dates 11"
+        render :new
+      else
+        @reservation.attributes = reservation_params
+        @reservation.total = calculate_total(@room, @reservation)
+        if @reservation.save
+          redirect_to reservation_path(@reservation)
+        else
+          flash.now[:error] = @reservation.errors.full_messages.to_sentence
+          render :new
+        end
+      end
+    end
+  end
+
   def success
     @reservation = Reservation.where(user_id: current_user.id, id: params[:reservation_id]).first
     @reservation.status = :approved

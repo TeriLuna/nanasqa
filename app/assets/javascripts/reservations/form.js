@@ -60,5 +60,22 @@ $( document ).ready(function() {
       }
     ).bind('datepicker-close', updateInputDates);
 
+
+    var editView = {
+      setCheckInCheckoutDate: function(){
+        var $startDate = $(".js-start-date");
+        var $endDate = $(".js-end-date");
+        $startDate = moment($startDate.val()).add(1, "days").format("DD/MM/Y")
+        $endDate = moment($endDate.val()).add(1, "days").format("DD/MM/Y")
+        var defaultDate = $startDate + " to " + $endDate;
+        $("#js-datepicker-id").val(defaultDate);
+        $("#js-datepicker-id").trigger("change");
+      }
+    };
+
+    if($(".js-container-action").data("rails-action") == "edit"){
+      editView.setCheckInCheckoutDate();
+    }
+
   })()
 });

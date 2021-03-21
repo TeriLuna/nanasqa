@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section js-container-action" data-rails-action=<%= params[:action] %> >
   <%- if flash.any? %>
     <%- flash.each do |type, msg| %>
       <%- alert = type == "alert" ? 'danger' : 'success' %>
@@ -40,7 +40,7 @@
     <div class="section">
       <div class="row align-items-start padding-bottom-0">
         <div class="col-12 col-md-6">
-          <%= form_for(reservation, url: reservations_path, method: :post, html: { class: "product-quantity" }) do |f| %>
+          <%= form_for(reservation, html: { class: "product-quantity" }) do |f| %>
 
             <%= f.label t('reservations.number_of_people') %>
             <br>
