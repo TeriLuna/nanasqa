@@ -11,7 +11,7 @@ class VolunteersController < ApplicationController
   def create
     @volunteer = Volunteer.find_or_initialize_by(email: volunteer_params[:email])
     @volunteer.attributes = volunteer_params
-    @volunteer.additional_info = params[:additional_info]
+    @volunteer.additional_info = additional_info_params[:additional_info]
 
     if @volunteer.save
       flash.now[:notice] = t("volunteer.application_sent_successfuly")
@@ -24,7 +24,6 @@ class VolunteersController < ApplicationController
 
   private
   def volunteer_params
-    params.permit(:additional_info)
     params.require(:volunteer).permit(
       :first_name,
       :last_name,
@@ -39,5 +38,9 @@ class VolunteersController < ApplicationController
       :how_can_you_help,
       :questions
     )
+  end
+
+  def additional_info_params
+    params.permit(additional_info: {})
   end
 end

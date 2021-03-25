@@ -25,7 +25,7 @@
         </ul>
         <h3 class="font-weight-normal margin-0"><%= @reservation.room.name %></h3>
         <div class="product-price">
-          <h5 class="font-weight-light"><ins>Per Person: <%= Money.new(@reservation.room.price_per_person, "USD").format %></ins></h5>
+          <h5 class="font-weight-light"><ins>Per Person: <%= "$#{@reservation.room.price_per_person}" %></ins></h5>
         </div>
         <div class="product-info-box margin-bottom-20">
           <p><%= @reservation.room.description %></p>
