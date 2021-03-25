@@ -53,7 +53,7 @@ gem 'country_select', '~> 4.0'
 gem "font-awesome-rails"
 gem 'devise'
 gem 'rack-cors', require: 'rack/cors'
-gem 'mercadopago-sdk'
+gem 'mercadopago-sdk', '1.3.0'
 gem 'country_select', '~> 4.0'
 
 group :development, :test do
