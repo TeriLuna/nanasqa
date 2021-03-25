@@ -35,6 +35,9 @@ class ReservationsController < ApplicationController
         @reservation.attributes = reservation_params
         @reservation.total = calculate_total(@room, @reservation)
         if @reservation.save
+          ReservationMailer.with(user: current_user, reservation: @reservation).
+                        reservation.
+                        deliver_later
           redirect_to reservation_path(@reservation)
         else
           flash.now[:error] = @reservation.errors.full_messages.to_sentence

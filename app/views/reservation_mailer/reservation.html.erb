@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hola, <%= ENV['ADMIN_EMAIL']%> </h1>
+    <p>
+      You have a new user registered: <br>
+      email: <%= @user.email %> <br>
+      room: <%= @reservation.room.name %>.<br>
+      start_date: <%= @reservation.start_date.strftime("%d - %B - %Y") %>.<br>
+      end_date: <%= @reservation.end_date.strftime("%d - %B - %Y") %>.<br>
+      message: <%= @reservation.message %>.<br>
+    </p>
+    <p>
+      Take a look in the admin page or contact him/her directly
+    </p>
+    <p>Have a great session!</p>
+  </body>
+</html>
