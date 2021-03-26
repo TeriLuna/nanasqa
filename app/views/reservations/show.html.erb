@@ -19,10 +19,9 @@
 
       </div>
       <div class="col-12 col-lg-5">
-        <ul class="list-inline-slash font-small margin-bottom-10">
-          <li><a href="#">Technology</a></li>
-          <li><a href="#">Smart Watch</a></li>
-        </ul>
+        <div class="font-small margin-bottom-10">
+          <%= breadcrumbs.render(format: :inline, separator: "/") %>
+        </div>
         <h3 class="font-weight-normal margin-0"><%= @reservation.room.name %></h3>
         <div class="product-price">
           <h5 class="font-weight-light"><ins>Per Person: <%= "$#{@reservation.room.price_per_person}" %></ins></h5>

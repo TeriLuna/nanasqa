@@ -7,6 +7,8 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    breadcrumbs.add "Reservations", reservations_path
+    breadcrumbs.add "New", ""
     @user = current_user
     @room = Room.find(params[:room_id])
     @reservation = Reservation.new
@@ -20,8 +22,10 @@ class ReservationsController < ApplicationController
   end
 
   def show
+    breadcrumbs.add "Reservations", reservations_path
     # Is passing the user for segurity TODO: use cancancan
     @reservation = Reservation.where(user_id: current_user.id, id: params[:id]).includes(room: { images_attachments: :blob }).first
+    breadcrumbs.add @reservation.room.name, reservation_path(@reservation)
     @preference_id = generate_mercado_pago_preference(@reservation)
   end
 

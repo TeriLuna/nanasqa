@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   before_action :store_user_location!, if: :storable_location?
+  before_action :add_initial_breadcrumbs
   around_action :switch_locale
+
+  def add_initial_breadcrumbs
+    breadcrumbs.add "Home", root_path
+  end
 
   def switch_locale(&action)
     locale = params[:locale] || I18n.default_locale
