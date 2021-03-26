@@ -5,6 +5,8 @@ class VolunteersController < ApplicationController
   end
 
   def new
+    breadcrumbs.add "Volunteer", volunteers_path
+    breadcrumbs.add "New", ""
     @volunteer = Volunteer.new
   end
 
