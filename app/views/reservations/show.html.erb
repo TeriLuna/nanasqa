@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row col-spacing-50">
       <div class="col-12 col-lg-7">
-
         <div class="row gallery-wrapper">
           <div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="10" data-owl-xs="1" data-owl-sm="1" data-owl-md="2" data-owl-lg="2" data-owl-xl="2">
             <%- @reservation.room.images.each do |img| %>
@@ -16,7 +15,6 @@
             <%- end %>
           </div>
         </div>
-
       </div>
       <div class="col-12 col-lg-5">
         <div class="font-small margin-bottom-10">
@@ -28,7 +26,6 @@
         </div>
         <div class="product-info-box margin-bottom-20">
           <p><%= @reservation.room.description %></p>
-
         </div>
         <div class="margin-top-30">
           <p>Num of People: <%= @reservation.quantity %></p>
@@ -46,7 +43,6 @@
             <%= link_to pay_buttom_text(reservation: @reservation, show_total: true, show_text: true, room: @reservation.room), "javascript:;", class: "button button-md button-dark js-pay-buttom" %>
             <%= link_to "Edit reservation", edit_reservation_path(@reservation), class: "button button-md button-grey" %>
           <%- end %>
-
         </div>
       </div>
     </div>
@@ -91,8 +87,8 @@
               </div>
             </div>
           </div>
-
         </div>
+      </div>
     </div>
   </div>
 </div>
