@@ -21,7 +21,12 @@ ActiveAdmin.register ChatRoom do
       div do
         user = User.find(chat_room.slug.split("_")[1])
         room = Room.find(chat_room.slug.split("_")[2])
-        "user: #{user.username} - room: #{room.name}"
+        not_answered = chat_room.messages.order(created_at: :asc).last.user.present?
+        text = "user: #{user.username} - room: #{room.name}"
+        if not_answered
+          text += " - NOT ANSWERED"
+        end
+        text
       end
     end
     actions
