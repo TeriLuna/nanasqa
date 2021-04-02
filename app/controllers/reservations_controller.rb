@@ -27,6 +27,9 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.where(user_id: current_user.id, id: params[:id]).includes(room: { images_attachments: :blob }).first
     breadcrumbs.add @reservation.room.name, reservation_path(@reservation)
     @preference_id = generate_mercado_pago_preference(@reservation)
+
+    @chatroom = ChatRoom.where(slug: "chat_#{current_user.id}_#{@reservation.room.id}").first_or_initialize
+    @message = Message.new
   end
 
   def create
@@ -39,6 +42,8 @@ class ReservationsController < ApplicationController
         @reservation.attributes = reservation_params
         @reservation.total = calculate_total(@room, @reservation)
         if @reservation.save
+          chat_room = ChatRoom.where(slug: "chat_#{current_user.id}_#{@room.id}").first_or_initialize
+          chat_room.save!
           ReservationMailer.with(user: current_user, reservation: @reservation).
                         reservation.
                         deliver_later

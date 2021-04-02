@@ -5,5 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :room, optional: true
+
   has_many :reservations, dependent: :destroy
+  has_many :messages
+  has_many :chatrooms, through: :messages
+
+  def username
+    self.email.split("@")[0]
+  end
 end

@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section js-user-id" data-chatroom="<%= current_user.id %>_<%= @reservation.room.id %>" >
   <div class="container">
     <div class="row col-spacing-50">
       <div class="col-12 col-lg-7">
@@ -57,7 +57,7 @@
           <a class="nav-link active" data-toggle="tab" href="#additional-info"><%= t('reservations.description') %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#messages"><%= t('reservations.messages') %></a>
+          <a class="nav-link" data-toggle="tab" href="#messages-tab"><%= t('reservations.messages') %></a>
         </li>
       </ul>
       <div class="tab-content">
@@ -65,28 +65,23 @@
           <p><%= @reservation.room.description %></p>
         </div>
 
-        <div class="tab-pane fade" id="messages">
-          <div class="section">
-            <div class="container bg-grey">
-              <div class="text-left">
-                <div class="row">
-                  <div class="col-12">
-                    <p>hola</p>
-                  </div>
-                </div>
-              </div>
+        <div class="tab-pane fade" id="messages-tab">
+          <% if @chatroom.messages.any? %>
+            <div class="panel-body" id="messages">
+              <%= render partial: 'message', collection: @chatroom.messages%>
             </div>
+          <%else%>
+            <div class="panel-body hidden" id="messages">
+            </div>
+          <%end%>
+          <%= form_for @message, remote: true, authenticity_token: true do |f| %>
+            <%= f.label :your_message %>:
+            <%= f.text_area :content, class: "form-control js-message-content", data: { textarea: "message" } %>
 
-            <div class="container bg-dark">
-              <div class="text-right">
-                <div class="row">
-                  <div class="col-12">
-                    <p>hola!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <%= f.hidden_field :chat_room_id, value: @chatroom.id %>
+            <%= f.hidden_field :reservation_id, value: @reservation.id %>
+            <%= f.submit "send", class: "btn btn-primary" %>
+          <% end %>
         </div>
       </div>
     </div>

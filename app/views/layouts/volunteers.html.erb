@@ -3,25 +3,21 @@
   <!-- ***** HEAD ***** -->
   <%= render partial: "shared/head" %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
   <body class="loaded">
 
+    <a href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to book a room! / Hola! Me gustaría reservar una habitación" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
 
-  <a href="https://api.whatsapp.com/send?phone=+51931015223&text=Hi!! I would like to book a room! / Hola! Me gustaría reservar una habitación" class="whatsapp-float" target="_blank">
-      <i class="fab fa-whatsapp my-float"></i>
-  </a>
+    <!-- ***** HEADER ***** -->
+    <%= render partial: "shared/header", locals: { layout_classes: "header right white" } %>
 
-  <!-- ***** HEADER ***** -->
-  <%= render partial: "shared/header", locals: { layout_classes: "header right white" } %>
+      <%= yield %>
 
-    <%= yield %>
+    <!-- ***** FOOTER ***** -->
+      <%= render partial: "shared/footer" %>
 
-  <!-- ***** FOOTER ***** -->
-    <%= render partial: "shared/footer" %>
-
-  <!-- ***** JAVASCRIPTS ***** -->
+    <!-- ***** JAVASCRIPTS ***** -->
     <%= render partial: "shared/javascripts"%>
 
   </body>
