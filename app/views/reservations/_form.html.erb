@@ -14,9 +14,9 @@
     <!-- IMG Section -->
     <div class="section-xs">
       <div class="row col-spacing-30 align-items-start items-center">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 margin-left-20">
           <div class="row gallery-wrapper col-spacing-10">
-            <div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="10" data-owl-xs="1" data-owl-sm="1" data-owl-md="1" data-owl-lg="1" data-owl-xl="1">
+            <div class="owl-carousel" autoWidth="true" autoHeight="true" data-owl-nav="true" data-owl-dots="false" data-owl-margin="10" data-owl-xs="1" data-owl-sm="1" data-owl-md="1" data-owl-lg="1" data-owl-xl="1">
 
               <%- if room.images.attached? %>
                 <%- room.images.each do |img| %>
@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5 margin-left-20">
           <%= render partial: "shared/breadcrumbs" %>
           <div class="product-info-box margin-bottom-20">
             <p><%= room.description %></p>
