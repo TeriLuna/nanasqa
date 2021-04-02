@@ -69,5 +69,4 @@ ActiveAdmin.register Room do
       row :updated_at
     end
   end
-
 end
