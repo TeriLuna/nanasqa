@@ -21,7 +21,7 @@ module ApplicationHelper
         total       = reservation.quantity * per_person
 
         show_total_text = (show_total ? "$#{total}" : "_total_")
-        text = "#{t('reservations.save')} | Pay #{show_total_text}"
+        text = "#{t('reservations.save')}"
       end
     end
     text
