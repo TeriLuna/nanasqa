@@ -25,7 +25,7 @@
           <a class="nav-link d-toggle no-underline font-weight-bold">Nanasqa</a>
           <ul class="nav-dropdown">
             <li class="nav-dropdown-item">
-              <%= link_to(t('reserve.volunteer'), volunteers_path, class: 'nav-dropdown-link sd-toggle no-underline')%>
+              <%= link_to(t('volunteer.title'), volunteers_path, class: 'nav-dropdown-link sd-toggle no-underline')%>
               <ul class="nav-subdropdown">
                 <li class="nav-subdropdown-item">
                 <%= link_to(t('volunteer.fill_forms'), new_volunteer_path, class: 'nav-subdropdown-link no-underline')%>
@@ -47,8 +47,8 @@
           <li class="nav-item">
             <a class="nav-link text-dark no-underline" href="#"><i class="fa fa-user"></i></a>
             <ul class="nav-dropdown">
-              <li class="nav-dropdown-item"><%= link_to t('header.my_info'), users_path, class: "nav-dropdown-link" %></li>
-              <li class="nav-dropdown-item"><%= link_to(t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
+              <li class="nav-dropdown-item"><%= link_to t('login.my_info'), users_path, class: "nav-dropdown-link" %></li>
+              <li class="nav-dropdown-item"><%= link_to(t('login.logout'), destroy_user_session_path, method: :delete, class: "nav-dropdown-link") %></li>
             </ul>
           </li>
           <%- else %>

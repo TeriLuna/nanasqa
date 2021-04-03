@@ -94,8 +94,7 @@ ActiveRecord::Schema.define(version: 2021_04_02_203658) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
-    t.decimal "total", default: "0.0"
-    t.jsonb "additional_info", default: {}
+    t.integer "total", default: 0
     t.integer "status", default: 0
   end
 

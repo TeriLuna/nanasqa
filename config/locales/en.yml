@@ -30,6 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  profile:
+    title: "Profile"
   login:
     update: "Update"
     text: "Login"
@@ -40,6 +42,14 @@ en:
     remember_me: "Remember me"
     sign_up: "Sign up"
     confirm_new_password: "Confirm new Password"
+    forgot_password: "Forgot your password?"
+    didnt_receive_confirmation: "Didn't receive confirmation instructions?"
+    didnt_receive_unlok: "Didn't receive unlock instructions?"
+    sing_in_with: "Sign in with "
+    ifwanna_update_password: "If you want to update your password, fill the next fields"
+    reservation: "Reservations"
+    my_info: "My info"
+    logout: "Logout"
   index:
     index_text_html: "Spend time and get chill in<br><b>Nanasqa Hostel</b>"
   testimonial:
@@ -64,6 +74,7 @@ en:
     trips: "Trips"
     flights: "Flights"
     volunteer: "Be a volunteer"
+    address_html: "Amaprovi Urbanization - Los Geranios Street Mz L Lt 13<br>Zip Code 11401 - Nazca, Peru"
   reservation:
     book_now: "Book now!"
     ong: "Our ONG!"
@@ -82,6 +93,7 @@ en:
     know_new_people: "Connect with new people!"
     know_new_people_text: "Here you will find people that come from around the world. Connect with people that even can practice a language with you!"
   volunteer:
+    title: "Volunteer"
     application_sent_successfuly: "Application sent successfully, soon our staff will contact you :)"
     application_sent_error: "Application not able to send, Please try again"
     title_volunteer: "Let's use our knowledges to make this sharing epic!"

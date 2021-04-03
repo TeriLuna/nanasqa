@@ -11,7 +11,7 @@
     <h3 class="font-weight-normal text-center margin-bottom-50"> <%= t('profile.title')%> </h3>
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <h4 class="text-center">My info</h4>
+        <h4 class="text-center"><%= t('login.my_info') %></h4>
         <!-- Snippet -->
         <%= form_for(@user, url: { action: "update_password" }) do |f| %>
           <%= f.label t('login.email') %>
@@ -19,7 +19,7 @@
 
           <br>
           <%= f.label t('login.password') %><br />
-          <p><i>If you want to update your password, fill the next fields</i></p>
+          <p><i><%= t('login.ifwanna_update_password') %></i></p>
           <%= f.password_field :password, autocomplete: "current-password" %>
 
           <%= f.label t('login.confirm_new_password') %><br />
@@ -30,7 +30,7 @@
 
       </div>
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-        <h4 class="text-center">Reservations</h4>
+        <h4 class="text-center"><%= t('login.reservation') %></h4>
         <div class="col-12">
           <%- @reservations.each do |reservation| %>
             <div class="prices-box border-0 bg-white border-radius box-shadow-with-hover margin-top-30">

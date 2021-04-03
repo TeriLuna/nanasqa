@@ -31,7 +31,7 @@
 
 es:
   profile:
-    title1: "Perfil"
+    title: "Perfil"
   login:
     update: "Actualizar"
     text: "Iniciar sesión"
@@ -42,6 +42,14 @@ es:
     remember_me: "Recuérdame"
     sign_up: "Regístrate"
     confirm_new_password: "Confirmar nueva contraseña"
+    forgot_password: " ¿Olvidáste tu constraseña?"
+    didnt_receive_confirmation: "¿No recibió las instrucciones de confirmación?"
+    didnt_receive_unlok: "¿No recibió instrucciones de desbloqueo?"
+    sing_in_with: "Iniciar sesión con "
+    ifwanna_update_password: "Si desea actualizar su contraseña, complete los siguientes campos"
+    reservation: "Reservaciones"
+    my_info: "Mi información"
+    logout: "Cerrar sesión"
   index:
     index_text_html: "Pasa tiempo y relájate en el<br><b>Hostal Nanasqa</b>"
   testimonial:
@@ -66,6 +74,7 @@ es:
     trips: "Viajes"
     flights: "Vuelos"
     volunteer: "Sé un voluntario"
+    address_html: "Urbanización Amaprovi - Calle Los Geranios Mz L Lt 13<br>Código Postal 11401 - Nasca, Perú"
   reservation:
     book_now: "Reserva ahora!"
     ong: "Nuestra ONG!"
@@ -84,6 +93,7 @@ es:
     know_new_people: "¡Conéctate con gente nueva! "
     know_new_people_text: "Aquí encontrarás personas que vienen de todo el mundo. ¡Conéctese con personas que incluso pueden practicar un idioma con usted!"
   volunteer:
+    title: "Voluntariado"
     application_sent_successfuly: "Solicitud enviada con éxito, pronto nuestro personal se pondrá en contacto contigo :)"
     application_sent_error: "La aplicación no se puede enviar. Vuelve a intentarlo"
     title_volunteer: "¡Usemos nuestros conocimientos para hacer que este intercambio sea épico!"
