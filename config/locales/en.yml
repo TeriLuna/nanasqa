@@ -30,13 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  profile:
-    title: "Profile"
-  hello: "Hello world"
   login:
     update: "Update"
     text: "Login"
-    email: E-mail
+    email: "E-mail"
     enter_your_email: "Enter your email"
     password: "Password"
     password_confirmation: "Confirm Password"
@@ -44,20 +41,20 @@ en:
     sign_up: "Sign up"
     confirm_new_password: "Confirm new Password"
   index:
-      index_text_html: "Spend time and get chill in<br><b>Nanasqa Hostel</b>"
+    index_text_html: "Spend time and get chill in<br><b>Nanasqa Hostel</b>"
   testimonial:
     work_away_member: "Workaway member"
     anka_work_away_member: '"A (not so little) magical spot surrounded by the desert. If you are looking for a place with friendly atmosphere, open-minded people, and you like to dance - this is a place to go to! There are not many hostels like this one. Full of art, good vibes and music. Roy is a very generous host. You might have a problem to leave ;)"'
-    fosca_work_away_member: '"Buenisima experiencia!! Para empezar, Roy es maravillosa persona...detallista, extrovertido y muy flexible! Eso hace que trabajar en el hostal no sea nunca pesado y haya manera de conocer con tranquilidad Nasca y su entorno (también gracias a los consejos que te proporciona Roy, que sabe muuuucho de su tierra!!). La atmósfera en casa es siempre relajada y muy alegre, la comica rica y el clima calientito....pude quedarme sólo una semana por falta de tiempo, sino porque irse?!??"'
+    fosca_work_away_member: '"Great experience !! For starters, Roy is a wonderful person ... thoughtful, outgoing and very flexible! That makes working in the hostel never tiresome and there is a way to get to know Nasca and its surroundings with ease (also thanks to the advice provided by Roy, who knows a lot about his land !!). The atmosphere at home is always relaxed and very happy, the comics are rich and the weather is warm .... I could only stay a week due to lack of time, but why go ?!??"'
     erica_work_away_member: '"I left my heart in this beautiful place! It is friendly and chilly! Work is easy and amazing! And it is possible to visit many incredible places. Roy is a great person, always happy and really kind, with a lots of positive energy. It has been an unforgettable experience! Thanks for evrything :blush:"'
     theres_philip_work_away_member: '"We had a really great time at Roy’s hostel! Unfortunately we could only stay for one week. The work was pretty easy and made a lot of fun! Roy and the other volunteers we stayed with were all very friendly and funny! We did a lot of things together and enjoyed it every day! Nice place to be!!"'
     worldpacker_member: "Worldpacker member"
-    ignacio_worldpacker_member: '"Si quieres vivir la mejor experiencia de tu vida como voluntario NANASQA HOSTEL es para ti! Muchos llegamos a Nasca queriendo conocer las lineas de las que todos hablan, y seguir nuestro camino, pero cuando te encuentres con el mejor Hostel de toda la ciudad, y conoces a Roy, todo cambia y quieres hacer de Nasca tu nuevo hogar, asi que lo unico malo que podria pasarte es que cambies tus planes y te quedes por un mes o dos viviendo esta experiencia! Nunca lo olvidare!"'
-    tamara_worldpacker_member: '"Definitivamente recomendamos Nanasqa! Desafortunadamente no pudimos conocer al propietario, pero todo fue muy bien. Estuvimos dos semanas muy cómodos. El trabajo era tranquilo y el hostel es nuevo y lindo!"'
+    ignacio_worldpacker_member: '"If you want to live the best experience of your life as a volunteer, NANASQA HOSTEL is for you! Many of us came to Nasca wanting to know the lines that everyone talks about, and continue on our way, but when you find the best Hostel in the whole city, and you meet Roy, everything changes and you want to make Nasca your new home, so The only bad thing that could happen to you is that you change your plans and stay for a month or two living this experience! I will never forget!"'
+    tamara_worldpacker_member: '"We definitely recommend Nanasqa! Unfortunately we could not meet the owner, but everything went very well. We were very comfortable for two weeks. Work was quiet and the hostel is new and nice!"'
     booking_member: "Booking member"
-    carmen_booking_member: '"Nos tocó viajar por carretera justo en el paro de Ica y estuvimos en constante comunicación por Whatsap con el encargado, llegamos mucho despues de lo acordado previamente pero nos facilitó todo de muy buena onda e incluso nos ayudó con delivery de comida. 100 puntos! Además estuvimos siempre seguras y acogidas con nuestra perrita sin ningún problema."'
-    enrique_booking_member: '"La relación calidad precio, estaba haciendo un viaje de Arequipa a Lima 1000 KM aprox. y un punto intermedio para descanso es Nazca, lo bueno que el hotel aceptaba mascota por eso optamos por elegirlo y no me arrepiento supero mis expectativas. Habitación amplia, tenia dos baños por ser una cuádruple, limpieza excelente y trato amable y personalizado."'
-    bisbal_booking_member: '"Podia hacer mi propio desayuno en la cocina con comodidad. Me dieron todas las facilidades para mi bici (me prestaron una cadena para asegurarla al carro) y mi gata (me prestaron un scotch fuerte para su pañal je,je) Roy es super servicial."'
+    carmen_booking_member: '"We had to travel by road right at the Ica stop and we were in constant communication by Whatsap with the manager, we arrived much later than previously agreed but he provided us with everything in a very good mood and even helped us with food delivery. 100 points! In addition, we were always safe and welcomed with our dog without any problem."'
+    enrique_booking_member: '"The value for money, I was making a trip from Arequipa to Lima about 1000 KM. and an intermediate point to rest is Nazca, the good thing that the hotel accepted pets, that is why we chose to choose it and I do not regret it exceeds my expectations. Large room, had two bathrooms for being a quadruple, excellent cleaning and friendly and personalized service."'
+    bisbal_booking_member: '"I could make my own breakfast in the kitchen comfortably. They gave me all the facilities for my bike (they lent me a chain to secure it to the car) and my cat (they lent me a strong scotch for her diaper heh heh) Roy is super helpful."'
     airbnb_member: "Airbnb member"
     patricia_airbnb_member: '"I was actually very spontaneously going to Nazca and I booked a room at the Hostel of Roy when I was on the bus from Lima to Nazca. I did not really care where to stay and booked a double room with ensuite bathroom. Actually it turns out this was the best choice I could make! Very nice and clean double room with a nice bathroom and HOT water!!! Breakfast is not included but for S15 you get fruits, eggs, bread, butter and jam and tea. The people hanging out at the hostel were very friendly and it feels like you arrive and stay in a family house. So all in all a great experience! If I go back to Nazca will definitely come back! Thank you Roy :))"'
     lee_airbnb_member: '"Roy s place is fantastic! It is new and clean and we met lots of good people there. It was so nice to have our own double room with comfy bed and pillows and a private bathroom! You can walk to and from the bus station and even book a Nazca Lines tour with Roy. You do not even have to walk to the shop for beers as they have a fridge full of them for cheap! And for you ladies out there: a great hairdryer!"'
@@ -83,9 +80,9 @@ en:
     relax_chill: "Get relax and chill"
     relax_chill_text: "Nanasqa is a home away from home, so come and get chill and relax in this awesome place in the middle of the desert."
     know_new_people: "Connect with new people!"
-    know_new_people_text: "Here you will find people that come from around the world. Connect with people that even can practice a lenguage with you!"
+    know_new_people_text: "Here you will find people that come from around the world. Connect with people that even can practice a language with you!"
   volunteer:
-    application_sent_successfuly: "Application sent successfuly, soon our staff will contact you :)"
+    application_sent_successfuly: "Application sent successfully, soon our staff will contact you :)"
     application_sent_error: "Application not able to send, Please try again"
     title_volunteer: "Let's use our knowledges to make this sharing epic!"
     text_volunteer_html: "<p>We are a community where travelers share experiences and memories. We have opportunities to volunteer in multiple areas: permaculture, visual art, hostel activities, sewing, social projects. We would like to know about any unique talents you can contribute to our community. Our intention is to allow every traveler to develop their skills and to become involved in various projects. We offer breakfast and a bed. If you want to collaborate with us, please send us a message.</p>"
@@ -115,10 +112,10 @@ en:
     discounts_on_tours: "Discounts on Tours"
     discounts_on_tours_text: "Get discounts for tours and excursions around town."
     free_laundry: "Free Laundry"
-    free_laundry_text: "Fou can use our laundry room freely."
+    free_laundry_text: "You can use our laundry room freely."
     dance_classes: "Dance Classes"
     dance_classes_text: "Take free dance classes at our place."
-    language_lessons: "Language Lenssons"
+    language_lessons: "Language Lessons"
     language_lessons_text: "Take free language classes at our place."
     use_kitchen: "Use our equipped kitchen"
     use_kitchen_text:  "Feel free to use our kitchen and make your own delicious food."
@@ -150,44 +147,44 @@ en:
     description: "Room Description"
     messages: "Messages"
   ong:
-    project_name: "R∃V∃RS∃"
+    project_name: "REVERSE"
     about_reverse_name: "About Reverse"
-    about_reverse_html: "El hostel <b>Nanasqa</b> comprometido con el mejoramiento ecológico de la ciudad de Nasca, ha creado el proyecto <b>R∃V∃RS∃</b>, que mediante acciones comunitarias. aportará a la transformación en materia ambiental, turística y social, en conjunto con empresas de la municipalidad de Nasca como <u>Aero Palcazu, la asociación de Tubulates y Areneros Nasqueños (ATAN), la agencia Aventurina Tour</u>, entre otros, comprometidos y convencidos en la acción colectiva."
-    about_reverse2_html: "Para la <b>JORNADA CÍVICA DE LIMPIEZA POR NASCA</b>, <b>R∃V∃RS∃</b> enfocará sus esfuerzos en la recolección de plásticos de la cuenca del río Tierras Blancas, en una acción pedagógica para concienciar y evidenciar la problemática de micro plásticos en los mares y la afectación de los frágiles ecosistemas del desierto, finalizando la jornada en los senderos turísticcos de Cantalloq y Paredones, fortaleciendo y mejorando la visión del turismo como uno de los ejes económicos primarios de Nasca."
-    about_reverse3_html: "Por esta razón te invitamos a participar activamente contribuyendo en acciones sociales que se generan desde la comunidad y para la comunidad.<br>A continuación encontrarás las formas de ser patrocinador del <b>R∃V∃RS∃</b>."
-    contribucion_5000: "PLAN ECO - Contribución S/ 5.000"
-    pendon_patrocinador: "Pendón de patrocinador en camiones de recolección"
-    pendon_patrocinador_text: "Durante todo el recorrido nos acompañarán camiones de recolección para los residuos, por tu contribución ubicaremos un pendón de 80x110 cm en uno de los caminoes de recolección."
-    logo_patrocinador: "Logo de patrocinador en Flyers y en línea"
-    logo_patrocinador_text: "El logotipo del patrocinador estará en nuestros flyers. Se imprimirán flyers informativos sobre la jornada y flyers educativos con información sobre el uso de plásticos y buenas prácticas."
-    medios_radiales: "Mención de patrocinador en medios raiales, televisivos y en línea"
-    medios_radiales_text: "Se mencionará al patrocinador en todos los medios de difusión. La jornada de limpieza se publicará en medios de comunicación locales y regionales y se difundirá en medios internacionales.<br>Para la participación de voluntarios viajeros contamos con una base de datos de más de mil viajeros en todo el mundo a los que informaremos por medio de newletters."
-    contribucion_10000: "PLAN FULL - Contribución S/ 10.000"
-    pendon_patrocinador2: "¡Super patrocinador! Pendones en camiones, puntos de hidratación y acopio."
-    pendon_patrocinador2_text: "Durante todo el recorrido nos acompañaran camiones de recolección para los residuos; por tu contribución, ubicaremos un pendón en uno de los camiones de recolección, otro en los puntos de hidratación y otro más en el punto de acopio."
-    logo_patrocinador2: "Logo de patrocinador en flyers, pasacalles y en linea"
-    logo_patrocinador2_text: "Tu logotipo estará en nuestros flyers como patrocinador. Se imprimirán flyers informativos sobra la jornada y flyers educativos con información sobre el uso de plásticos y buenas prácticas. Se ubicarán 2 pasa calles en la ruta demarcada."
-    medios_radiales2: "Mención de patrocinador en medios radiales, televisivos y en línea"
-    medios_radiales2_text: "El patrocinador se mencionará en todos los medios de difusión. La jornada de limpieza se publicará en medios de comunicación locales y regionales y se difundirá en medios internacionales para la participación de voluntarios viajeros. Contamos con una base de datos de más de mil viajeros en todo el mundo a los que informaremos por medio de newletters."
-    que_hacer_aporte: "¿Qué haremos con tu aporte?"
-    buy_materials: "Compra de materiales necesarios para la jornada de limpieza"
-    buy_materials_text: "Para R∃V∃RS∃ se estima la participación de 100 voluntarios que en un recorrido por una ruta seleccionada, recolectarán plásticos de la cuenca del río, el patrocinador hará posible el desarrollo de la jornada con su aporte."
-    hydration: "Montaje de zonas para hidratación para recolectores y personal logístico"
-    hydration_text: "La jornada tendrá una duración de aproximadamente 8 horas desde su montaje hasta su desarrollo. El recorrido durará 3 horas; se instaurará un punto de hidratación. Con tu aporte se patrocinará el desarrollo digno de la jornada para todos los participantes."
-    acopio: "Montaje de zonas de acopio"
-    acopio_text: "Se instaurarán zonas de acopio donde todo el plástico recolectado se juntará para su posterior transporte a los centros de reciclaje. Con tu aporte contribuirás a disminuir la cantidad de plástico que llegará al mar desde el cauce del río Tierras Blancas."
-    donation: "¡Donarémos más tachos para Nasca!"
-    donation_text: "Por cada aporte recibido, no solo financiaremos el proyecto R∃V∃RS∃ que beneficiará a Nasca, los senderos turísticos de Cantalloq y Paredones mejorando la experiencia de los habitantes y los visitantes y dejando un mensaje social, sino que además, por tu aporte en el plan ECO, donaremos 1 tacho de basura y por el plan FULL donaremos 2 tachos de basura, aportando al plan de la municipalidad de Nasca que intenta solventar el problema de las basuras."
-    how_contribute: "¿Cómo aportar a R∃V∃RS∃?"
-    learn_us: "¡Conózcamonos!"
-    learn_us_text: "Hablémos sobre el proyecto, te explicaremos cómo se está desarrollando, en qué vamos y otros beneficios que otendrás. R∃V∃RS∃ es un proyecto donde todos aportaremos ideas y acciones."
-    know_trate: "Conoce el trato"
-    know_trate_text: "Los aportes que se realizan al proyecto son intercambios voluntarios entre las partes, Nanasqa y el patrocinador, con el fin de aportar beneficios ecológicos aportando a la comunidad. Sin embargo, nuestro compromiso es total y nuestro intercambio publicitario se expresará mediante un trato."
-    make_your_contribution: "Realiza tu aporte"
-    make_your_contribution_text: "Elije el plan con el que quieres participar en la jornada (ECO / FULL). Firmemos el trato escrito y haz tu aporte de la forma más cómoda para ti, por medio de transacción bancaria o el método más conveniente."
-    finally_phrase_html: "TRABAJAMOS COLECTIVAMENTE PARA REVERSAR EL DAÑO CAUSADO<br><br>¿QUIERES APORTAR?"
+    about_reverse_html: "The <b> Nanasqa </b> hostel, committed to the ecological improvement of the city of Nasca, has created the <b> R∃V∃RS∃ </b> project, which through Community actions will contribute to the transformation in environmental, tourist and social matters, in conjunction with companies of the Nasca municipality such as <u> Aero Palcazu, the Association of Tubulates and Nasqueños Sandboxes (ATAN), the Aventurina Tour agency </u> , among others, committed and convinced in collective action. "
+    about_reverse2_html: "For the <b> CIVIC CLEANING DAY FOR NASCA </b>, <b> R∃V∃RS∃ </b> will focus its efforts on the collection of plastics from the Tierras Blancas river basin, in a pedagogical action to raise awareness and highlight the problem of microplastics in the seas and the impact of the fragile ecosystems of the desert, ending the day on the tourist trails of Cantalloq and Paredones, strengthening and improving the vision of tourism as one of the primary economic axes of Nasca. "
+    about_reverse3_html: "For this reason we invite you to actively participate by contributing in social actions that are generated from the community and for the community. <br> Below you will find the ways to be a sponsor of <b> R∃V∃RS∃ </ b >. "
+    contribution_5000: "ECO PLAN - Contribution S / 5,000"
+    banner_patrocinador: "Banner of sponsor in collection trucks"
+    pendon_patrocinador_text: "During the entire tour we will be accompanied by collection trucks for waste, for your contribution we will place an 80x110 cm banner in one of the ways of gathering. "
+    logo_patrocinador: "Sponsor logo on Flyers and online"
+    logo_patrocinador_text: "The sponsor's logo will be on our flyers. Informative flyers about the day and educational flyers with information on the use of plastics and good practices will be printed."
+    media_radiales: "Mention of sponsor in radio, television and online media"
+    media_radiales_text: "The sponsor will be mentioned in all the media. The clean-up day will be published in local and regional media and will be broadcast in international media. < br> For the participation of traveling volunteers we have a database of more than a thousand travelers around the world to whom we will inform through newsletters. "
+    contribution_10000: "PLAN FULL - Contribution S / 10,000"
+    pendon_patrocinador2: "Super sponsor! Banners in trucks, hydration points and storage."
+    pendon_patrocinador2_text: "Throughout the tour we will be accompanied by collection trucks for the waste; for your contribution, we will place a banner in one of the collection trucks, another at the hydration points and another at the collection point."
+    logo_patrocinador2: "Sponsor logo on flyers, parades and online"
+    logo_patrocinador2_text: "Your logo will be on our flyers as a sponsor. Informational flyers will be printed on the day and educational flyers with information on the use of plastics and good practices. 2 will be located passes streets on the demarcated route. "
+    media_radiales2: "Mention of sponsor in radio, television and online media"
+    media_radiales2_text: "The sponsor will be mentioned in all the media. The clean-up day will be published in local and regional media and will be broadcast in international media for the participation of traveling volunteers. We have a database of more than a thousand travelers around the world that we will inform through newsletters. "
+    que_hacer_aporte: "What will we do with your contribution?"
+    buy_materials: "Purchase of materials necessary for the cleaning day"
+    buy_materials_text: "For R∃V∃RS∃ the participation of 100 volunteers is estimated to be taking part in a tour of a selected route, they will collect plastics from the river basin, the sponsor will do possible the development of the day with your contribution. "
+    hydration: "Assembly of hydration areas for collectors and logistics personnel"
+    hydration_text: "The day will last approximately 8 hours from assembly to development. The tour will last 3 hours; a hydration point will be established. will sponsor the worthy development of the day for all participants. "
+    collection: "Assembly of collection areas"
+    collection_text: "Collection areas will be established where all the collected plastic will be collected for subsequent transport to recycling centers. With your contribution you will help reduce the amount of plastic that reaches the sea from the riverbed of the Tierras Blancas river. "
+    donation: "We will donate more cans for Nasca!"
+    donation_text: "For each contribution received, we will not only finance the R∃V∃RS∃ project that will benefit Nasca, the Cantalloq and Paredones tourist trails, improving the experience of the inhabitants and visitors and leaving a social message, but also, For your contribution to the ECO plan, we will donate 1 garbage can and For the FULL plan we will donate 2 garbage cans, contributing to the Nasca municipality plan that tries to solve the garbage problem. "
+    how_contribute: "How to contribute to R∃V∃RS∃? "
+    learn_us: "Let's get to know each other! "
+    learn_us_text: "Let's talk about the project, we will explain how it is developing, where we are going and other benefits that you will get. R∃V∃RS∃ is a project where we will all contribute ideas and actions. "
+    Know_trate: "Know the deal "
+    know_trate_text: "The contributions made to the project are voluntary exchanges between the parties, Nanasqa and the sponsor, in order to provide ecological benefits by contributing to the community. However, our commitment is total and our advertising exchange will be expressed through a deal. "
+    Make_your_contribution: "Make your contribution "
+    make_your_contribution_text: "Choose the plan with which you want to participate in the day (ECO / FULL). Let us sign the written agreement and make your contribution in the most comfortable way for you, through a bank transaction or the most convenient method. "
+    Finally_phrase_html: "WE WORK COLLECTIVELY TO REVERSE THE DAMAGE CAUSED <br> <br> DO YOU WANT TO CONTRIBUTE? "
     sponsor: "Be an sponsor!"
-    help_community: "Help the Nasca comunity"
+    help_community: "Help the Nasca community"
     social_media: "Flyers and digital media"
     soocial_marketing: "Social Marketing"
     publicity: "Publicity"
@@ -221,13 +218,13 @@ en:
     skill_exchange: "What skills do you want to exchange?"
     administration: "Administration"
     animal_care: "Animal Care"
-    arts: "Arts"
+    arts: "Art"
     bartending: "Bartending"
     cleaning: "Cleaning"
-    content_writter: "Content Writter"
+    content_writter: "Content Writer"
     cooking: "Cooking"
     farming: Farming"
-    gardering: "Gardering"
+    gardering: "Gardening"
     handyman: "Handyman"
     housekeeping: "Housekeeping"
     kitchen_hand: "Kitchen Hand"
